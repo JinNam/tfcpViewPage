@@ -212,11 +212,10 @@ body{
 			}
 		}
 		.floating_header_inner_container_contents_right_minimal{
-			@include header-inner-container-contents-right;		
+			@include header-inner-container-contents-right;
 			
-			.floating_header_inner_container_contents_right_minimal_menu {
-				span{
-				}
+			.floating_header_inner_container_contents_right_minimal_menu {				
+			
 			}
 		}
 		.header_line {
