@@ -1,3 +1,15 @@
+body {
+  font-family: MyriadPro-Regular, "nanum gothic";
+  src: url("./fonts/MyriadPro/MyriadPro-Regular.otf") format("truetype"); }
+  body a:hover, body #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-child(n) a:hover:visited, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-child(n) body a:hover:visited, body #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-child(n) a.middle_a_btn:hover, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-child(n) body a.middle_a_btn:hover, body #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-child(n) a:hover:link, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-child(n) body a:hover:link, body #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-child(n) a:hover:active, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-child(n) body a:hover:active, body #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) a:hover:link, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) body a:hover:link, body #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) a:hover:visited, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) body a:hover:visited, body #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) a.middle_a_btn:hover, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) body a.middle_a_btn:hover, body #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) a:hover:active, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) body a:hover:active, body #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-child(n) a:hover:visited, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-child(n) body a:hover:visited, body #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-child(n) a.middle_a_btn:hover, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-child(n) body a.middle_a_btn:hover, body #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-child(n) a:hover:link, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-child(n) body a:hover:link, body #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-child(n) a:hover:active, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-child(n) body a:hover:active, body #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) a:hover:link, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) body a:hover:link, body #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) a:hover:visited, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) body a:hover:visited, body #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) a.middle_a_btn:hover, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) body a.middle_a_btn:hover, body #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) a:hover:active, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) body a:hover:active {
+    text-decoration: none; }
+  body a:visited, body #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-child(n) a:visited, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-child(n) body a:visited, body #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-child(n) a.middle_a_btn:link, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-child(n) body a.middle_a_btn:link, body #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-child(n) a.middle_a_btn:active, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-child(n) body a.middle_a_btn:active, body #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-child(n) a.middle_a_btn:hover, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-child(n) body a.middle_a_btn:hover, body #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) a.middle_a_btn:link, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) body a.middle_a_btn:link, body #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) a:visited, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) body a:visited, body #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) a.middle_a_btn:active, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) body a.middle_a_btn:active, body #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) a.middle_a_btn:hover, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) body a.middle_a_btn:hover, body #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-child(n) a:visited, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-child(n) body a:visited, body #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-child(n) a.middle_a_btn:link, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-child(n) body a.middle_a_btn:link, body #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-child(n) a.middle_a_btn:active, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-child(n) body a.middle_a_btn:active, body #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-child(n) a.middle_a_btn:hover, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-child(n) body a.middle_a_btn:hover, body #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) a.middle_a_btn:link, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) body a.middle_a_btn:link, body #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) a:visited, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) body a:visited, body #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) a.middle_a_btn:active, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) body a.middle_a_btn:active, body #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) a.middle_a_btn:hover, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) body a.middle_a_btn:hover, body a.middle_a_btn:link, body a.middle_a_btn:active, body a.middle_a_btn:hover {
+    text-decoration: none; }
+  body a:link, body #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-child(n) a:link, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-child(n) body a:link, body #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) a:link, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) body a:link, body #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-child(n) a:link, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-child(n) body a:link, body #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) a:link, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) body a:link {
+    text-decoration: none; }
+  body a:active, body #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-child(n) a:active, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-child(n) body a:active, body #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) a:active, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) body a:active, body #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-child(n) a:active, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-child(n) body a:active, body #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) a:active, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) body a:active {
+    text-decoration: none; }
+
 #floating_header #floating_header_real {
   position: fixed;
   top: 0px;
@@ -20,54 +32,79 @@
     padding-top: 5px;
     padding-bottom: 15px;
     overflow: hidden; }
+    @media only screen and (max-width: 1023px) {
+      #floating_header #floating_header_real .floating_header_inner_container_contents .floating_header_inner_container_contents_right {
+        display: none; } }
+    @media only screen and (min-width: 1201px) {
+      #floating_header #floating_header_real .floating_header_inner_container_contents .floating_header_inner_container_contents_right_minimal {
+        display: block; } }
   #floating_header #floating_header_real .floating_header_inner_container_contents_left {
     float: left;
     display: inline-block;
     padding-top: 10px; }
-  #floating_header #floating_header_real .menu_left {
-    float: left;
-    display: inline-block;
-    padding-top: 10px; }
+    #floating_header #floating_header_real .floating_header_inner_container_contents_left .menu_left {
+      float: left;
+      display: inline-block;
+      padding-top: 10px; }
   #floating_header #floating_header_real .floating_header_inner_container_contents_right {
     padding-top: 20px;
     width: 70%;
     float: right;
     text-align: right; }
-  #floating_header #floating_header_real .menu_right {
-    list-style: none;
-    display: inline-block;
-    margin-right: -5px;
-    margin-bottom: 0px;
-    margin-top: 0px; }
-  #floating_header #floating_header_real li {
-    display: inline;
-    margin-right: 20px;
-    box-sizing: border-box;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -moz-font-feature-settings: 'liga', 'kern';
-    direction: ltr;
-    font-family: MyriadPro-Regular, sans-serif;
-    src: url("./fonts/MyriadPro/MyriadPro-Regular.otf") format("truetype"); }
-    #floating_header #floating_header_real li:nth-child(n) a, #floating_header #floating_header_real li:nth-child(n) a:visited, #floating_header #floating_header_real li:nth-child(n) a.middle_a_btn:hover, #floating_header #floating_header_real li:nth-child(n) a:link, #floating_header #floating_header_real li:nth-child(n) a:active {
-      font-size: 17px;
-      font-weight: 600;
-      color: rgba(102, 102, 102, 0.6); }
-      #floating_header #floating_header_real li:nth-child(n) a:hover {
-        font-weight: 700;
-        text-decoration: none;
-        color: #333333;
-        font-family: MyriadPro-Bold, sans-serif;
-        src: url("./fonts/MyriadPro/MyriadPro-Bold.otf") format("truetype"); }
-    #floating_header #floating_header_real li:nth-last-child(1) a:hover {
-      font-weight: 700;
-      text-decoration: none;
-      color: #9900FF !important; }
-    #floating_header #floating_header_real li:nth-last-child(1) a, #floating_header #floating_header_real li:nth-last-child(1) a:link, #floating_header #floating_header_real li:nth-last-child(1) a:visited, #floating_header #floating_header_real li:nth-last-child(1) a.middle_a_btn:hover, #floating_header #floating_header_real li:nth-last-child(1) a:active {
-      font-size: 17px;
-      font-weight: 600;
-      color: #33CC99; }
+    #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right {
+      list-style: none;
+      display: inline-block;
+      margin-right: -5px;
+      margin-bottom: 0px;
+      margin-top: 0px; }
+      #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li {
+        display: inline;
+        margin-right: 15px;
+        box-sizing: border-box;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        -moz-font-feature-settings: 'liga', 'kern';
+        direction: ltr; }
+        #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-child(n) a, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-child(n) a:visited, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-child(n) a.middle_a_btn:hover, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-child(n) a:link, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-child(n) a:active {
+          font-size: 17px;
+          font-weight: 600;
+          transition-property: color;
+          transition-duration: 1s;
+          color: rgba(102, 102, 102, 0.6); }
+          #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-child(n) a:hover {
+            font-weight: 700;
+            text-decoration: none;
+            transition-property: color;
+            transition-duration: 1s;
+            color: #333333;
+            font-family: MyriadPro-Bold, "nanum gothic";
+            src: url("./fonts/MyriadPro/MyriadPro-Bold.otf") format("truetype"); }
+        #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) a:hover {
+          transition-property: color;
+          transition-duration: 1s;
+          font-weight: 700;
+          text-decoration: none;
+          color: #9900FF !important; }
+        #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) a, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) a:link, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) a:visited, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) a.middle_a_btn:hover, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) a:active {
+          font-size: 17px;
+          font-weight: 600;
+          color: #33CC99; }
+    #floating_header #floating_header_real .floating_header_inner_container_contents_right .floating_header_inner_container_contents_right_search {
+      display: inline-block;
+      position: relative;
+      margin-right: 15px; }
+      #floating_header #floating_header_real .floating_header_inner_container_contents_right .floating_header_inner_container_contents_right_search a, #floating_header #floating_header_real .floating_header_inner_container_contents_right .floating_header_inner_container_contents_right_search .menu_right li:nth-child(n) a:visited, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-child(n) .floating_header_inner_container_contents_right_search a:visited, #floating_header #floating_header_real .floating_header_inner_container_contents_right .floating_header_inner_container_contents_right_search .menu_right li:nth-child(n) a.middle_a_btn:hover, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-child(n) .floating_header_inner_container_contents_right_search a.middle_a_btn:hover, #floating_header #floating_header_real .floating_header_inner_container_contents_right .floating_header_inner_container_contents_right_search .menu_right li:nth-child(n) a:link, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-child(n) .floating_header_inner_container_contents_right_search a:link, #floating_header #floating_header_real .floating_header_inner_container_contents_right .floating_header_inner_container_contents_right_search .menu_right li:nth-child(n) a:active, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-child(n) .floating_header_inner_container_contents_right_search a:active, #floating_header #floating_header_real .floating_header_inner_container_contents_right .floating_header_inner_container_contents_right_search .menu_right li:nth-last-child(1) a:link, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) .floating_header_inner_container_contents_right_search a:link, #floating_header #floating_header_real .floating_header_inner_container_contents_right .floating_header_inner_container_contents_right_search .menu_right li:nth-last-child(1) a:visited, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) .floating_header_inner_container_contents_right_search a:visited, #floating_header #floating_header_real .floating_header_inner_container_contents_right .floating_header_inner_container_contents_right_search .menu_right li:nth-last-child(1) a.middle_a_btn:hover, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) .floating_header_inner_container_contents_right_search a.middle_a_btn:hover, #floating_header #floating_header_real .floating_header_inner_container_contents_right .floating_header_inner_container_contents_right_search .menu_right li:nth-last-child(1) a:active, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) .floating_header_inner_container_contents_right_search a:active {
+        -webkit-transition: -webkit-transform 2s;
+        transition: transform 2s; }
+        #floating_header #floating_header_real .floating_header_inner_container_contents_right .floating_header_inner_container_contents_right_search a:hover, #floating_header #floating_header_real .floating_header_inner_container_contents_right .floating_header_inner_container_contents_right_search .menu_right li:nth-child(n) a:hover:visited, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-child(n) .floating_header_inner_container_contents_right_search a:hover:visited, #floating_header #floating_header_real .floating_header_inner_container_contents_right .floating_header_inner_container_contents_right_search .menu_right li:nth-child(n) a.middle_a_btn:hover, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-child(n) .floating_header_inner_container_contents_right_search a.middle_a_btn:hover, #floating_header #floating_header_real .floating_header_inner_container_contents_right .floating_header_inner_container_contents_right_search .menu_right li:nth-child(n) a:hover:link, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-child(n) .floating_header_inner_container_contents_right_search a:hover:link, #floating_header #floating_header_real .floating_header_inner_container_contents_right .floating_header_inner_container_contents_right_search .menu_right li:nth-child(n) a:hover:active, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-child(n) .floating_header_inner_container_contents_right_search a:hover:active, #floating_header #floating_header_real .floating_header_inner_container_contents_right .floating_header_inner_container_contents_right_search .menu_right li:nth-last-child(1) a:hover:link, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) .floating_header_inner_container_contents_right_search a:hover:link, #floating_header #floating_header_real .floating_header_inner_container_contents_right .floating_header_inner_container_contents_right_search .menu_right li:nth-last-child(1) a:hover:visited, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) .floating_header_inner_container_contents_right_search a:hover:visited, #floating_header #floating_header_real .floating_header_inner_container_contents_right .floating_header_inner_container_contents_right_search .menu_right li:nth-last-child(1) a.middle_a_btn:hover, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) .floating_header_inner_container_contents_right_search a.middle_a_btn:hover, #floating_header #floating_header_real .floating_header_inner_container_contents_right .floating_header_inner_container_contents_right_search .menu_right li:nth-last-child(1) a:hover:active, #floating_header #floating_header_real .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) .floating_header_inner_container_contents_right_search a:hover:active {
+          -webkit-transform: rotate(720deg);
+          transform: rotate(720deg); }
+  #floating_header #floating_header_real .floating_header_inner_container_contents_right_minimal {
+    padding-top: 20px;
+    width: 70%;
+    float: right;
+    text-align: right; }
   #floating_header #floating_header_real .header_line {
     /*margin-top: -2px;*/
     border-top: 1px solid rgba(0, 0, 0, 0.15); }
@@ -100,133 +137,168 @@
     float: left;
     display: inline-block;
     padding-top: 10px; }
-  #floating_header #floating_header_virtual .menu_left {
-    float: left;
-    display: inline-block;
-    padding-top: 10px; }
+    #floating_header #floating_header_virtual .floating_header_inner_container_contents_left .menu_left {
+      float: left;
+      display: inline-block;
+      padding-top: 10px; }
   #floating_header #floating_header_virtual .floating_header_inner_container_contents_right {
     padding-top: 20px;
     width: 70%;
     float: right;
     text-align: right; }
-  #floating_header #floating_header_virtual .menu_right {
-    list-style: none;
-    display: inline-block;
-    margin-right: -5px;
-    margin-bottom: 0px;
-    margin-top: 0px; }
-  #floating_header #floating_header_virtual li {
-    display: inline;
-    margin-right: 20px;
-    box-sizing: border-box;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -moz-font-feature-settings: 'liga', 'kern';
-    direction: ltr;
-    font-family: MyriadPro-Regular, sans-serif;
-    src: url("./fonts/MyriadPro/MyriadPro-Regular.otf") format("truetype"); }
-    #floating_header #floating_header_virtual li:nth-child(n) a, #floating_header #floating_header_virtual li:nth-child(n) a:visited, #floating_header #floating_header_virtual li:nth-child(n) a.middle_a_btn:hover, #floating_header #floating_header_virtual li:nth-child(n) a:link, #floating_header #floating_header_virtual li:nth-child(n) a:active {
-      font-size: 17px;
-      font-weight: 600;
-      color: rgba(102, 102, 102, 0.6); }
-      #floating_header #floating_header_virtual li:nth-child(n) a:hover {
-        font-weight: 700;
-        text-decoration: none;
-        color: #333333;
-        font-family: MyriadPro-Bold, sans-serif;
-        src: url("./fonts/MyriadPro/MyriadPro-Bold.otf") format("truetype"); }
-    #floating_header #floating_header_virtual li:nth-last-child(1) a:hover {
-      font-weight: 700;
-      text-decoration: none;
-      color: #9900FF !important; }
-    #floating_header #floating_header_virtual li:nth-last-child(1) a, #floating_header #floating_header_virtual li:nth-last-child(1) a:link, #floating_header #floating_header_virtual li:nth-last-child(1) a:visited, #floating_header #floating_header_virtual li:nth-last-child(1) a.middle_a_btn:hover, #floating_header #floating_header_virtual li:nth-last-child(1) a:active {
-      font-size: 17px;
-      font-weight: 600;
-      color: #FFFFFF; }
+    #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right {
+      list-style: none;
+      display: inline-block;
+      margin-right: -5px;
+      margin-bottom: 0px;
+      margin-top: 0px; }
+      #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li {
+        display: inline;
+        margin-right: 15px;
+        box-sizing: border-box;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        -moz-font-feature-settings: 'liga', 'kern';
+        direction: ltr; }
+        #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-child(n) a, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-child(n) a:visited, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-child(n) a.middle_a_btn:hover, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-child(n) a:link, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-child(n) a:active {
+          font-size: 17px;
+          font-weight: 600;
+          transition-property: color;
+          transition-duration: 1s;
+          color: rgba(102, 102, 102, 0.6); }
+          #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-child(n) a:hover {
+            font-weight: 700;
+            text-decoration: none;
+            transition-property: color;
+            transition-duration: 1s;
+            color: #333333;
+            font-family: MyriadPro-Bold, "nanum gothic";
+            src: url("./fonts/MyriadPro/MyriadPro-Bold.otf") format("truetype"); }
+        #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) a:hover {
+          transition-property: color;
+          transition-duration: 1s;
+          font-weight: 700;
+          text-decoration: none;
+          color: #9900FF !important; }
+        #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) a, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) a:link, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) a:visited, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) a.middle_a_btn:hover, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) a:active {
+          font-size: 17px;
+          font-weight: 600;
+          color: #FFFFFF; }
+    #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .floating_header_inner_container_contents_right_search {
+      display: inline-block;
+      position: relative;
+      margin-right: 15px; }
+      #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .floating_header_inner_container_contents_right_search a, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .floating_header_inner_container_contents_right_search .menu_right li:nth-child(n) a:visited, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-child(n) .floating_header_inner_container_contents_right_search a:visited, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .floating_header_inner_container_contents_right_search .menu_right li:nth-child(n) a.middle_a_btn:hover, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-child(n) .floating_header_inner_container_contents_right_search a.middle_a_btn:hover, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .floating_header_inner_container_contents_right_search .menu_right li:nth-child(n) a:link, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-child(n) .floating_header_inner_container_contents_right_search a:link, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .floating_header_inner_container_contents_right_search .menu_right li:nth-child(n) a:active, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-child(n) .floating_header_inner_container_contents_right_search a:active, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .floating_header_inner_container_contents_right_search .menu_right li:nth-last-child(1) a:link, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) .floating_header_inner_container_contents_right_search a:link, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .floating_header_inner_container_contents_right_search .menu_right li:nth-last-child(1) a:visited, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) .floating_header_inner_container_contents_right_search a:visited, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .floating_header_inner_container_contents_right_search .menu_right li:nth-last-child(1) a.middle_a_btn:hover, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) .floating_header_inner_container_contents_right_search a.middle_a_btn:hover, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .floating_header_inner_container_contents_right_search .menu_right li:nth-last-child(1) a:active, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) .floating_header_inner_container_contents_right_search a:active {
+        -webkit-transition: -webkit-transform 2s;
+        transition: transform 2s; }
+        #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .floating_header_inner_container_contents_right_search a:hover, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .floating_header_inner_container_contents_right_search .menu_right li:nth-child(n) a:hover:visited, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-child(n) .floating_header_inner_container_contents_right_search a:hover:visited, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .floating_header_inner_container_contents_right_search .menu_right li:nth-child(n) a.middle_a_btn:hover, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-child(n) .floating_header_inner_container_contents_right_search a.middle_a_btn:hover, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .floating_header_inner_container_contents_right_search .menu_right li:nth-child(n) a:hover:link, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-child(n) .floating_header_inner_container_contents_right_search a:hover:link, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .floating_header_inner_container_contents_right_search .menu_right li:nth-child(n) a:hover:active, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-child(n) .floating_header_inner_container_contents_right_search a:hover:active, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .floating_header_inner_container_contents_right_search .menu_right li:nth-last-child(1) a:hover:link, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) .floating_header_inner_container_contents_right_search a:hover:link, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .floating_header_inner_container_contents_right_search .menu_right li:nth-last-child(1) a:hover:visited, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) .floating_header_inner_container_contents_right_search a:hover:visited, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .floating_header_inner_container_contents_right_search .menu_right li:nth-last-child(1) a.middle_a_btn:hover, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) .floating_header_inner_container_contents_right_search a.middle_a_btn:hover, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .floating_header_inner_container_contents_right_search .menu_right li:nth-last-child(1) a:hover:active, #floating_header #floating_header_virtual .floating_header_inner_container_contents_right .menu_right li:nth-last-child(1) .floating_header_inner_container_contents_right_search a:hover:active {
+          -webkit-transform: rotate(720deg);
+          transform: rotate(720deg); }
   #floating_header #floating_header_virtual .header_line {
     /*margin-top: -2px;*/
     border-top: 1px solid rgba(0, 0, 0, 0.15); }
 
 .select_first_div {
-  background-image: url(/img/main-banner.png);
-  margin-top: 70px;
-  height: 600px;
-  vertical-align: bottom;
   position: relative;
-  width: 100%; }
-
-.container.first_div_title {
-  width: 700px;
-  padding: 100px;
-  margin-left: 200px;
-  font-family: MyriadPro-Regular, sans-serif;
-  src: url("./fonts/MyriadPro/MyriadPro-Regular.otf") format("truetype"); }
-  .container.first_div_title h1 {
-    font-weight: 500;
-    color: #FFFFFF; }
-  .container.first_div_title small {
-    color: #FFFFFF; }
-  .container.first_div_title .custom {
-    background-color: rgba(0, 0, 0, 0.05);
-    color: #FFFFFF;
-    border: 1px solid #FFFFFF; }
+  margin-top: 70px;
+  height: 600px; }
+  .select_first_div img {
+    position: relative;
+    height: 100%;
+    max-width: 100%;
+    width: 100%;
+    overflow: hidden;
+    z-index: -1; }
+  .select_first_div .container.first_div_title {
+    position: absolute;
+    top: 30px;
+    left: 200px;
+    max-width: 50%; }
+    .select_first_div .container.first_div_title h1 {
+      font-weight: 500;
+      color: #FFFFFF; }
+    .select_first_div .container.first_div_title small {
+      color: #FFFFFF; }
+    .select_first_div .container.first_div_title .custom {
+      background-color: rgba(0, 0, 0, 0.05);
+      color: #FFFFFF;
+      border: 1px solid #FFFFFF; }
 
 .select_middle_div {
   text-align: center;
-  box-sizing: border-box; }
-  @media only screen and (max-width: 1200px) and (min-width: 1024px) {
-    .select_middle_div {
-      height: 500px; } }
-  @media only screen and (min-width: 1201px) {
-    .select_middle_div {
-      height: 500px; } }
-
-.container_1 {
   box-sizing: border-box;
-  max-width: 100%;
-  margin: 0 auto; }
+  padding-top: 50px;
+  height: 600px; }
   @media only screen and (max-width: 1023px) {
-    .container_1 {
-      padding-left: 20px;
-      padding-right: 20px;
-      vertical-align: middle; } }
+    .select_middle_div {
+      height: 100%; }
+      .select_middle_div .container_1 {
+        box-sizing: border-box;
+        max-width: 100%;
+        margin: 0 auto;
+        position: relative;
+        /*top: 50%;
+        transform: translateY(-50%);
+        vertical-align: middle;*/
+        padding-left: 20px;
+        padding-right: 20px;
+        width: default; }
+        .select_middle_div .container_1 .middle_subject {
+          width: 100%;
+          margin: default; }
+          .select_middle_div .container_1 .middle_subject .subject_title {
+            margin: 0 auto; }
+          .select_middle_div .container_1 .middle_subject P {
+            font-size: default; }
+          .select_middle_div .container_1 .middle_subject h1 {
+            font-size: 30px; } }
   @media only screen and (max-width: 1200px) and (min-width: 1024px) {
-    .container_1 {
+    .select_middle_div .container_1 {
+      box-sizing: border-box;
+      max-width: 100%;
+      margin: 0 auto;
+      position: relative;
+      /*top: 50%;
+      transform: translateY(-50%);
+      vertical-align: middle;*/
       padding-left: 20px;
       padding-right: 20px;
-      width: 980px;
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%); } }
+      width: 980px; }
+      .select_middle_div .container_1 .middle_subject {
+        width: 100%;
+        margin: 15px; }
+        .select_middle_div .container_1 .middle_subject .subject_title {
+          margin: 0 auto; }
+        .select_middle_div .container_1 .middle_subject P {
+          font-size: 13px; }
+        .select_middle_div .container_1 .middle_subject h1 {
+          font-size: 30px; } }
   @media only screen and (min-width: 1201px) {
-    .container_1 {
-      padding-left: 10px;
-      padding-right: 10px;
-      width: 980px;
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%); } }
+    .select_middle_div {
+      @inculde container_1(1050px); } }
 
 .select_middle_div .card-list {
   display: inline-block;
   box-sizing: border-box;
-  text-align: center; }
+  text-align: center;
+  overflow: hidden;
+  margin: 0 auto; }
   @media only screen and (max-width: 1023px) {
     .select_middle_div .card-list {
       padding-top: 10px;
       margin-left: 10px;
       margin-right: 10px;
-      padding-bottom: 10px;
-      overflow: hidden; } }
+      padding-bottom: 10px; } }
   @media only screen and (max-width: 1200px) and (min-width: 1024px) {
     .select_middle_div .card-list {
-      padding: 30px;
-      width: 870px; } }
+      /*padding: 30px;*/
+      width: 780px; } }
   @media only screen and (min-width: 1201px) {
     .select_middle_div .card-list {
-      margin-left: -40px;
-      width: 1050px; } }
+     /*
+    	margin-left: -40px;*/
+      width: 1025px; } }
 
 .select_middle_div .card {
   -webkit-border-radius: 5px;
@@ -242,7 +314,9 @@
   position: relative;
   max-width: 420px;
   margin: 0 auto;
-  margin-bottom: 18px; }
+  margin-bottom: 18px;
+  min-height: 330px;
+  max-height: 400px; }
   @media only screen and (max-width: 1200px) and (min-width: 1024px) {
     .select_middle_div .card {
       display: block;
@@ -292,7 +366,6 @@
 
 .middle_a_btn {
   font-size: 8px;
-  padding: 5px 15px;
   line-height: 1.5;
   display: inline-block;
   font-size: 14px;
@@ -302,17 +375,14 @@
   border: 1px solid #33CC99;
   background: #33BB99;
   font-weight: 400;
-  margin-bottom: 18px;
-  margin-top: 18px;
-  font-family: MyriadPro-Regular, sans-serif;
-  src: url("./fonts/MyriadPro/MyriadPro-Regular.otf") format("truetype"); }
+  margin-bottom: 10px; }
   .middle_a_btn:visited, .middle_a_btn:link, .middle_a_btn:active, .middle_a_btn:hover {
     text-decoration: none;
     color: #FFFFFF; }
 
 .bottom_div {
   /*border-top: 1px solid $gray-color;*/
-  font-family: MyriadPro-Regular, sans-serif;
+  font-family: MyriadPro-Regular, "nanum gothic";
   src: url("./fonts/MyriadPro/MyriadPro-Regular.otf") format("truetype"); }
   .bottom_div .bottom_inner {
     max-width: 100%;

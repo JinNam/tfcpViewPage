@@ -7,9 +7,28 @@ $black-color: #000000;
 $ok-color: #33CC99;
 $ok-color2: #33BB99;
 
-@mixin apply-font-type($font-style1:MyriadPro-Regular, $font-style2:sans-serif, $font-style3:Arial){
+@mixin apply-font-type($font-style1:MyriadPro-Regular, $font-style2:'nanum gothic', $font-style3:sans-serif){
 	font-family: $font-style1, $font-style2;
-	src: url("./fonts/MyriadPro/#{$font-style1}.otf") format("truetype");	
+	src: url("./fonts/MyriadPro/#{$font-style1}.otf") format("truetype");
+}
+
+body{
+	@include apply-font-type();
+	
+	a{
+		&:hover{
+			text-decoration:none;
+		}		
+		&:visited{
+			text-decoration:none;
+		}
+		&:link{
+			text-decoration:none;
+		}
+		&:active{
+			text-decoration:none;
+		}
+	}
 }
 
 ///////////////////////header navi/////////////////////
@@ -37,11 +56,24 @@ $ok-color2: #33BB99;
 		display: inline-block;
 		padding-top: 10px;
 	}
-	@mixin header-inner-container-contents_right{
+	@mixin header-inner-container-contents-right{
 		padding-top: 20px;
 		width: 70%;
 		float: right;
 		text-align: right;
+	}
+	@mixin header-inner-container-contents-right-search{
+		display: inline-block;
+		position: relative;
+		margin-right: 15px;
+		a{
+			-webkit-transition:-webkit-transform 2s;
+    		transition:transform 2s;
+			&:hover{
+				-webkit-transform:rotate(720deg);
+    			transform:rotate(720deg);
+			}
+		}
 	}
 	@mixin header-menu-left{
 		float: left;
@@ -61,21 +93,22 @@ $ok-color2: #33BB99;
 	}
 	@mixin header-menu-right-li{
 		display: inline;
-		margin-right: 20px;
+		margin-right: 15px;
 		box-sizing: border-box;		
 		text-rendering: optimizeLegibility;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 		-moz-font-feature-settings: 'liga', 'kern';
 		direction: ltr;
-		@include apply-font-type();
 	}
 	@mixin li-nth{		
 		&:nth-child(n){
 			a{
 				font-size:17px;
-				font-weight: 600;	
-				color: rgba(102, 102, 102, 0.6);				
+				font-weight: 600;					
+				transition-property: color;
+  				transition-duration: 1s;
+				color: rgba(102, 102, 102, 0.6);
 				
 				&:visited{
 					@extend a;
@@ -89,7 +122,9 @@ $ok-color2: #33BB99;
 				&:hover{
 					font-weight: 700;	
 					text-decoration:none;
-					color: #333333;		
+					transition-property: color;
+  					transition-duration: 1s;
+					color: #333333;
 					@include apply-font-type(MyriadPro-Bold);
 				}
 			}
@@ -97,6 +132,8 @@ $ok-color2: #33BB99;
 		&:nth-last-child(1){
 			a{
 				&:hover{
+					transition-property: color;
+  					transition-duration: 1s;
 					font-weight: 700;
 					text-decoration:none;
 					color: #9900FF !important;
@@ -121,40 +158,67 @@ $ok-color2: #33BB99;
 		}
 		.floating_header_inner_container_contents {
 			@include header-inner-container-contents;
+			
+			@media only screen and (max-width: 1023px) 
+			{		
+				.floating_header_inner_container_contents_right{
+					display: none;
+				}
+			}		
+			@media only screen and (min-width: 1201px)
+			{		
+				.floating_header_inner_container_contents_right_minimal{
+					display: block;
+				}
+			}
 		}
 		.floating_header_inner_container_contents_left {
 			@include header-inner-container-contents-left;
-		}
-		.menu_left {
-			@include header-menu-left;
+			
+			.menu_left {
+				@include header-menu-left;
+			}
 		}
 		.floating_header_inner_container_contents_right {
-			@include header-inner-container-contents_right;
-		}
-		.menu_right {
-			@include  header-menu-right;
-		}
-		li {
-			@include header-menu-right-li;
-			@include li-nth;
-			&:nth-last-child(1){
-				a{
-					font-size:17px;
-					font-weight: 600;
-					color: #33CC99;	
-					
-					&:link{
-						@extend a;
-					}
-					&:visited{
-						@extend a;
-					}
-					&:active{
-						@extend a;
+			@include header-inner-container-contents-right;
+						
+			.menu_right {
+				@include  header-menu-right;
+
+				li {
+					@include header-menu-right-li;
+					@include li-nth;
+					&:nth-last-child(1){
+						a{
+							font-size:17px;
+							font-weight: 600;
+							color: #33CC99;	
+
+							&:link{
+								@extend a;
+							}
+							&:visited{
+								@extend a;
+							}
+							&:active{
+								@extend a;
+							}
+						}
 					}
 				}
+			}			
+			.floating_header_inner_container_contents_right_search {
+				@include header-inner-container-contents-right-search;
 			}
-		}		
+		}
+		.floating_header_inner_container_contents_right_minimal{
+			@include header-inner-container-contents-right;		
+			
+			.floating_header_inner_container_contents_right_minimal_menu {
+				span{
+				}
+			}
+		}
 		.header_line {
 			@include header-line;
 		}
@@ -181,145 +245,156 @@ $ok-color2: #33BB99;
 		}
 		.floating_header_inner_container_contents_left {
 			@include header-inner-container-contents-left;
-		}
-		.menu_left {
-			@include header-menu-left;
-		}
+			
+			.menu_left {
+				@include header-menu-left;
+			}
+		}		
 		.floating_header_inner_container_contents_right {
-			@include header-inner-container-contents_right;
-		}
-		.menu_right {
-			@include  header-menu-right;
-		}
-		li {
-			@include header-menu-right-li;
-			@include li-nth;
-			&:nth-last-child(1){
-				a{
-					font-size:17px;
-					font-weight: 600;
-					color: #FFFFFF;
-					&:link{
-						@extend a;
-					}
-					&:visited{
-						@extend a;
-					}
-					&:active{
-						@extend a;
+			@include header-inner-container-contents-right;
+				
+			.menu_right {
+				@include  header-menu-right;
+				
+				li {
+					@include header-menu-right-li;
+					@include li-nth;
+					&:nth-last-child(1){
+						a{
+							font-size:17px;
+							font-weight: 600;
+							color: #FFFFFF;
+							&:link{
+								@extend a;
+							}
+							&:visited{
+								@extend a;
+							}
+							&:active{
+								@extend a;
+							}
+						}
 					}
 				}
 			}
-		}				
+			.floating_header_inner_container_contents_right_search {
+				@include header-inner-container-contents-right-search;
+			}
+		}			
 		.header_line {
 			@include header-line;
 		}
 	}
 }
-.main_content_inner{
-	
-}
-.select_first_div {	
-	background-image: url(/img/main-banner.png);
+//////////////////////인덱스 첫번째 블록//////////////////////
+.select_first_div {
+	position: relative;
 	margin-top: 70px;
 	height: 600px;
-	vertical-align: bottom;	
-	position: relative;
-	width: 100%;
-}
-
-.container.first_div_title{
-	width: 700px;
-	padding: 100px;	
-	margin-left: 200px;
-	@include apply-font-type();
-	h1{
-		font-weight: 500;
-		color: $white-color;
-	}
-	small{
-		color: $white-color;
-	}
-	.custom{
-		background-color: rgba(0,0,0,.05);
-		color: $white-color;
-		border: 1px solid $white-color;
-	}
-}
-
-.select_middle_div{
-    //background: #eeeeee;
-    text-align: center;	
-	box-sizing: border-box;	
 	
-	@media only screen and (max-width: 1023px) 
-	{		
+	img{		
+		position: relative;
+		height: 100%;
+		max-width: 100%;
+		width: 100%;
+		overflow: hidden;
+		z-index: -1;
+	}
+	.container.first_div_title{
+		position: absolute;
+		top : 30px;
+		left : 200px;
+		max-width: 50%;
 		
+		h1{
+			font-weight: 500;
+			color: $white-color;
+		}
+		small{
+			color: $white-color;
+		}
+		.custom{
+			background-color: rgba(0,0,0,.05);
+			color: $white-color;
+			border: 1px solid $white-color;
+		}
+	}
+}
+//////////////////////인덱스 두번째 블록//////////////////////
+.select_middle_div{	
+	@mixin container_1($container-width:default,$sub-marjin:30px, $title-font-size:15px,$h1-size:default){
+		.container_1{
+			box-sizing: border-box;
+			max-width: 100%;
+			margin: 0 auto;
+			position: relative;
+			/*top: 50%;
+			transform: translateY(-50%);
+			vertical-align: middle;*/
+			padding-left: 20px;
+			padding-right: 20px;
+			width: $container-width;
+			
+			.middle_subject{
+				width: 100%;
+				margin: $sub-marjin;
+	
+				.subject_title{
+					margin: 0 auto;
+				}
+				P{
+					font-size: $title-font-size;
+				}
+				h1{
+					font-size: $h1-size;
+				}
+			}			
+		}
+	}
+		
+    text-align: center;	
+	box-sizing: border-box;
+	padding-top: 50px;
+	height: 600px;
+	
+	@media only screen and (max-width: 1023px) 
+	{		
+		@include container_1(default,default,default,30px);
+		height: 100%;
 	}
 	@media only screen and (max-width: 1200px) and (min-width: 1024px)
-	{
-		height: 500px;
+	{		
+		@include container_1(980px,15px,13px,30px);		
 	}
 	@media only screen and (min-width: 1201px)
 	{		
-		height: 500px;
-	}
-}
-
-.container_1{
-	box-sizing: border-box;
-	max-width: 100%;	
-	margin: 0 auto;		
-	
-	@media only screen and (max-width: 1023px) 
-	{
-		padding-left: 20px;
-    	padding-right: 20px;
-		vertical-align: middle;
-	}
-	@media only screen and (max-width: 1200px) and (min-width: 1024px)
-	{
-		padding-left: 20px;
-    	padding-right: 20px;	
-		width: 980px;		
-		position: relative;
-		top: 50%;
-		transform: translateY(-50%);
-	}
-	@media only screen and (min-width: 1201px)
-	{
-		padding-left: 10px;
-    	padding-right: 10px;	
-		width: 980px;
-		position: relative;
-		top: 50%;
-		transform: translateY(-50%);
+		@inculde container_1(1050px);		
 	}
 }
 
 .select_middle_div .card-list {
-    display: inline-block;    	
-   // height: 500px;    
+    display: inline-block;    	    
 	box-sizing: border-box;
-	text-align: center;
+	text-align: center;	
+	overflow: hidden;
+	margin: 0 auto;
 	
 	@media only screen and (max-width: 1023px) 
 	{
 		padding-top: 10px;
 		margin-left: 10px;
 		margin-right: 10px;
-		padding-bottom: 10px;
-		overflow: hidden;
+		padding-bottom: 10px;	
 	}
 	@media only screen and (max-width: 1200px) and (min-width: 1024px)
 	{		
-		padding: 30px;
-		width: 870px;
+		/*padding: 30px;*/
+		width: 780px;
 	}
 	@media only screen and (min-width: 1201px)
-	{
-		margin-left: -40px;
-		width: 1050px;
+	{/*
+		margin-left: -40px;*/
+		width: 1025px;
 	}
 }
 .select_middle_div .card {
@@ -337,6 +412,8 @@ $ok-color2: #33BB99;
 		max-width: 420px;
 		margin: 0 auto;
 		margin-bottom: 18px;
+		min-height: 330px;
+		max-height: 400px;
 	
 	@media only screen and (max-width: 1200px) and (min-width: 1024px)
 	{
@@ -397,7 +474,6 @@ $ok-color2: #33BB99;
 }
 .middle_a_btn{
 	font-size: 8px;
-    padding: 5px 15px;
 	line-height: 1.5;
     display: inline-block;
     font-size: 14px;
@@ -407,9 +483,8 @@ $ok-color2: #33BB99;
     border: 1px solid $ok-color;
     background: $ok-color2;
     font-weight: 400;
-	margin-bottom: 18px;	
-	margin-top: 18px;
-	@include apply-font-type();
+	margin-bottom: 10px;
+	
 	&:visited{
 		text-decoration: none;
 		color: $white-color;
