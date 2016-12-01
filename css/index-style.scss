@@ -1,5 +1,8 @@
 @charset "utf-8";
 
+@import "bootstrap-for-sass/stylesheets/bootstrap";
+@import "bootstrap-for-sass/stylesheets/bootstrap-compass";
+ 
 $blue-color: #33CC99;
 $gray-color: rgba(0, 0, 0, 0.15);
 $white-color: #FFFFFF;
@@ -16,19 +19,19 @@ body{
 	@include apply-font-type();
 	
 	a{
-		&:hover{
-			text-decoration:none;
-		}		
-		&:visited{
-			text-decoration:none;
-		}
 		&:link{
-			text-decoration:none;
+			text-decoration: none;
+		}
+		&:visited{
+			text-decoration: none;
 		}
 		&:active{
-			text-decoration:none;
+			text-decoration: none;
 		}
-	}
+		&:hover{
+			text-decoration: none;
+		}
+	}		
 }
 
 ///////////////////////header navi/////////////////////
@@ -66,6 +69,7 @@ body{
 		display: inline-block;
 		position: relative;
 		margin-right: 15px;
+		
 		a{
 			-webkit-transition:-webkit-transform 2s;
     		transition:transform 2s;
@@ -78,7 +82,7 @@ body{
 	@mixin header-menu-left{
 		float: left;
 		display: inline-block;
-		padding-top: 10px;
+		padding-top: 10px;		
 	}
 	@mixin header-menu-right{
 		list-style: none;
@@ -91,8 +95,8 @@ body{
 		/*margin-top: -2px;*/
 		border-top: 1px solid $gray-color;
 	}
-	@mixin header-menu-right-li{
-		display: inline;
+	@mixin header-menu-right-li($disp:inline){
+		display: $disp;
 		margin-right: 15px;
 		box-sizing: border-box;		
 		text-rendering: optimizeLegibility;
@@ -101,10 +105,10 @@ body{
 		-moz-font-feature-settings: 'liga', 'kern';
 		direction: ltr;
 	}
-	@mixin li-nth{		
+	@mixin li-nth($font-size:17px){		
 		&:nth-child(n){
 			a{
-				font-size:17px;
+				font-size:$font-size;
 				font-weight: 600;					
 				transition-property: color;
   				transition-duration: 1s;
@@ -141,14 +145,88 @@ body{
 			}
 		}
 	}
+	
+	.small_menu_right{
+		list-style: none;
+		display: block;
+		margin-right: -5px;
+		margin-bottom: 0px;
+		margin-top: 0px;
 		
+		li{
+			@include header-menu-right-li(block);
+			@include li-nth(30px);			
+			&:nth-last-child(1){
+				a{
+					font-size:30px;
+					font-weight: 600;
+					color: #33CC99;
+					text-decoration: none;
+
+					&:link{
+						@extend a;
+					}
+					&:visited{
+						@extend a;
+					}
+					&:active{
+						@extend a;
+					}
+					&:hover{
+						@extend a;
+					}
+				}
+			}
+		}
+	}
+	.small_menu_right_scrolldown{
+		list-style: none;
+		display: block;
+		margin-right: -5px;
+		margin-bottom: 0px;
+		margin-top: 0px;
+				
+		li{
+			@include header-menu-right-li(block);
+			@include li-nth(30px);
+			
+			&:nth-last-child(1){
+				a{
+					font-size:30px;
+					font-weight: 600;
+					color: $white-color;
+				
+					&:link{
+						@extend a;
+					}
+					&:visited{
+						@extend a;
+					}
+					&:active{
+						@extend a;
+					}
+					&:hover{
+						@extend a;
+					}
+				}
+			}
+		}
+	}
+	.small_menu_right_search{
+		display: block;
+		margin-right: 10px;
+		margin-bottom: 0px;
+		margin-top: 0px;
+	}	
+	
 	#floating_header_real {
 		position: fixed;
 		top: 0px;
 		left: 0px;
 		right: 0px;
 		z-index: 9999;
-		display: block;	
+		display: block;		
+		background:$white-color;
 
 		.floating_header_inner {
 			@include header-inner;
@@ -158,19 +236,6 @@ body{
 		}
 		.floating_header_inner_container_contents {
 			@include header-inner-container-contents;
-			
-			@media only screen and (max-width: 1023px) 
-			{		
-				.floating_header_inner_container_contents_right{
-					display: none;
-				}
-			}		
-			@media only screen and (min-width: 1201px)
-			{		
-				.floating_header_inner_container_contents_right_minimal{
-					display: block;
-				}
-			}
 		}
 		.floating_header_inner_container_contents_left {
 			@include header-inner-container-contents-left;
@@ -181,10 +246,9 @@ body{
 		}
 		.floating_header_inner_container_contents_right {
 			@include header-inner-container-contents-right;
-						
+			
 			.menu_right {
-				@include  header-menu-right;
-
+				@include header-menu-right;
 				li {
 					@include header-menu-right-li;
 					@include li-nth;
@@ -214,9 +278,8 @@ body{
 		.floating_header_inner_container_contents_right_minimal{
 			@include header-inner-container-contents-right;
 			
-			.floating_header_inner_container_contents_right_minimal_menu {				
-			
-			}
+			@extend .hidden-md;
+			@extend	.hidden-lg;
 		}
 		.header_line {
 			@include header-line;
@@ -248,12 +311,11 @@ body{
 			.menu_left {
 				@include header-menu-left;
 			}
-		}		
+		}
 		.floating_header_inner_container_contents_right {
 			@include header-inner-container-contents-right;
-				
 			.menu_right {
-				@include  header-menu-right;
+				@include header-menu-right;
 				
 				li {
 					@include header-menu-right-li;
@@ -279,7 +341,13 @@ body{
 			.floating_header_inner_container_contents_right_search {
 				@include header-inner-container-contents-right-search;
 			}
-		}			
+		}	
+		.floating_header_inner_container_contents_right_minimal{
+			@include header-inner-container-contents-right;
+			
+			@extend .hidden-md;
+			@extend	.hidden-lg;
+		}
 		.header_line {
 			@include header-line;
 		}
@@ -298,6 +366,8 @@ body{
 		width: 100%;
 		overflow: hidden;
 		z-index: -1;
+		
+		@extend .img-responsive;
 	}
 	.container.first_div_title{
 		position: absolute;
@@ -536,7 +606,7 @@ body{
 	}
 	.choose_lang {
 		padding-left: 20px;
-		background : url(/img/Resize_world_flags/WorldFlags/Korea-South.png) no-repeat left;	
+		background : url(./img/Resize_world_flags/WorldFlags/Korea-South.png) no-repeat left;	
 		&:hover{
 			text-decoration: underline;
 		}
