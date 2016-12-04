@@ -489,7 +489,7 @@ body {
     padding-right: 10px; }
   .bottom_div .choose_lang {
     padding-left: 20px;
-    background: url("imgResize_world_flagsWorldFlagsKorea-South.png") no-repeat left; }
+    background: url("../img/Resize_world_flags/WorldFlags/Korea-South.png") no-repeat left; }
     .bottom_div .choose_lang:hover {
       text-decoration: underline; }
   .bottom_div .bottom_line_down {
