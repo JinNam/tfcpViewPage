@@ -1,7 +1,7 @@
 @charset "utf-8";
 
-@import "bootstrap-for-sass/stylesheets/bootstrap";
-@import "bootstrap-for-sass/stylesheets/bootstrap-compass";
+/*@import "bootstrap-for-sass/stylesheets/bootstrap-responsive";
+@import "bootstrap-for-sass/stylesheets/bootstrap-compass";  */
  
 $blue-color: #33CC99;
 $gray-color: rgba(0, 0, 0, 0.15);
@@ -12,9 +12,9 @@ $ok-color2: #33BB99;
 
 @mixin apply-font-type($font-style1:MyriadPro-Regular, $font-style2:'nanum gothic', $font-style3:sans-serif){
 	font-family: $font-style1, $font-style2;
-	src: url("./fonts/MyriadPro/#{$font-style1}.otf") format("truetype");
+	src: url("\fonts\MyriadPro\#{$font-style1}.otf") format("truetype");
 }
-
+ 
 body{
 	@include apply-font-type();
 	
@@ -69,7 +69,6 @@ body{
 		display: inline-block;
 		position: relative;
 		margin-right: 15px;
-		
 		a{
 			-webkit-transition:-webkit-transform 2s;
     		transition:transform 2s;
@@ -82,7 +81,6 @@ body{
 	@mixin header-menu-left{
 		float: left;
 		display: inline-block;
-		padding-top: 10px;		
 	}
 	@mixin header-menu-right{
 		list-style: none;
@@ -105,7 +103,7 @@ body{
 		-moz-font-feature-settings: 'liga', 'kern';
 		direction: ltr;
 	}
-	@mixin li-nth($font-size:17px){		
+	@mixin li-nth($font-size:17px){
 		&:nth-child(n){
 			a{
 				font-size:$font-size;
@@ -146,87 +144,18 @@ body{
 		}
 	}
 	
-	.small_menu_right{
-		list-style: none;
-		display: block;
-		margin-right: -5px;
-		margin-bottom: 0px;
-		margin-top: 0px;
-		
-		li{
-			@include header-menu-right-li(block);
-			@include li-nth(30px);			
-			&:nth-last-child(1){
-				a{
-					font-size:30px;
-					font-weight: 600;
-					color: #33CC99;
-					text-decoration: none;
-
-					&:link{
-						@extend a;
-					}
-					&:visited{
-						@extend a;
-					}
-					&:active{
-						@extend a;
-					}
-					&:hover{
-						@extend a;
-					}
-				}
-			}
-		}
-	}
-	.small_menu_right_scrolldown{
-		list-style: none;
-		display: block;
-		margin-right: -5px;
-		margin-bottom: 0px;
-		margin-top: 0px;
-				
-		li{
-			@include header-menu-right-li(block);
-			@include li-nth(30px);
-			
-			&:nth-last-child(1){
-				a{
-					font-size:30px;
-					font-weight: 600;
-					color: $white-color;
-				
-					&:link{
-						@extend a;
-					}
-					&:visited{
-						@extend a;
-					}
-					&:active{
-						@extend a;
-					}
-					&:hover{
-						@extend a;
-					}
-				}
-			}
-		}
-	}
-	.small_menu_right_search{
-		display: block;
-		margin-right: 10px;
-		margin-bottom: 0px;
-		margin-top: 0px;
-	}	
-	
-	#floating_header_real {
+	#floating_header_nav{
 		position: fixed;
 		top: 0px;
 		left: 0px;
 		right: 0px;
 		z-index: 9999;
+		opacity: 0.93;
+		filter:alpha(opacity = 93);
 		display: block;		
-		background:$white-color;
+	}	
+	.floating_header_real{		
+		background:$white-color;		
 
 		.floating_header_inner {
 			@include header-inner;
@@ -245,8 +174,7 @@ body{
 			}
 		}
 		.floating_header_inner_container_contents_right {
-			@include header-inner-container-contents-right;
-			
+			@include header-inner-container-contents-right;			
 			.menu_right {
 				@include header-menu-right;
 				li {
@@ -270,31 +198,48 @@ body{
 						}
 					}
 				}
-			}			
+			}
+			/////////////// 휴대폰 및 테블릿/////////////////////////////
+			.small_menu_right{
+				list-style: none;
+				display : block;
+				margin-right: -5px;
+				margin-bottom: 0px;
+				margin-top: 0px;
+
+				li{ 
+					@include header-menu-right-li(block);
+					@include li-nth(30px);			
+					&:nth-last-child(1){
+						a{
+							font-size:30px;
+							font-weight: 600;
+							color: #33CC99;
+							text-decoration: none;
+
+							&:link{
+								@extend a;
+							}
+							&:visited{
+								@extend a;
+							}
+							&:active{
+								@extend a;
+							}
+							&:hover{
+								@extend a;
+							}
+						}
+					}
+				}
+			}
 			.floating_header_inner_container_contents_right_search {
 				@include header-inner-container-contents-right-search;
 			}
 		}
-		.floating_header_inner_container_contents_right_minimal{
-			@include header-inner-container-contents-right;
-			
-			@extend .hidden-md;
-			@extend	.hidden-lg;
-		}
-		.header_line {
-			@include header-line;
-		}
 	}
-	#floating_header_virtual {
-		position: fixed;
-		top: 0px;
-		left: 0px;
-		right: 0px;
-		z-index: 9999;
-		opacity: 0.93;
-		filter:alpha(opacity = 93);
+	.floating_header_virtual {
 		background-color: $blue-color;
-		display: none;
 
 		.floating_header_inner {
 			@include header-inner;
@@ -338,36 +283,77 @@ body{
 					}
 				}
 			}
+			/////////////// 휴대폰 및 테블릿/////////////////////////////
+			.small_menu_right{
+				list-style: none;
+				display: block;
+				margin-right: -5px;
+				margin-bottom: 0px;
+				margin-top: 0px;
+
+				li{
+					@include header-menu-right-li(block);
+					@include li-nth(30px);
+
+					&:nth-last-child(1){
+						a{ 
+							font-size:30px;
+							font-weight: 600;
+							color: $white-color;
+
+							&:link{
+								@extend a;
+							}
+							&:visited{
+								@extend a;
+							}
+							&:active{
+								@extend a;
+							}
+							&:hover{
+								@extend a;
+							} 
+						}
+					}
+				} 
+			} 			
 			.floating_header_inner_container_contents_right_search {
 				@include header-inner-container-contents-right-search;
 			}
-		}	
-		.floating_header_inner_container_contents_right_minimal{
-			@include header-inner-container-contents-right;
-			
-			@extend .hidden-md;
-			@extend	.hidden-lg;
-		}
-		.header_line {
-			@include header-line;
-		}
+		}			
+	}
+	
+	.floating_header_inner_container_contents_right_minimal{
+		float:right;
+		padding-top: 10px;
+		width: 70%;			
+		/*@extend .hidden-md;
+		@extend	.hidden-lg;*/
+	}
+	.header_line {
+		@include header-line;
 	}
 }
 //////////////////////인덱스 첫번째 블록//////////////////////
 .select_first_div {
 	position: relative;
-	margin-top: 70px;
-	height: 600px;
+	display: block;
+	max-height: 100%;
+	box-sizing: border-box;
 	
-	img{		
-		position: relative;
-		height: 100%;
+	@media only screen and (max-width: 991px) 
+	{		
+		margin-top:77px;
+	}
+	@media only screen and (min-width: 992px)
+	{		
+		margin-top:65px;
+	}	
+	
+	img{
 		max-width: 100%;
 		width: 100%;
-		overflow: hidden;
-		z-index: -1;
-		
-		@extend .img-responsive;
+		/*@extend .img-responsive;*/
 	}
 	.container.first_div_title{
 		position: absolute;
@@ -387,6 +373,15 @@ body{
 			color: $white-color;
 			border: 1px solid $white-color;
 		}
+	}
+	.first_div_sub_title{
+		position: relative;
+		display: block;
+		max-height: 100%;
+		max-width: 100%;
+		text-align: center;
+		border-bottom: 1px solid $gray-color;
+		padding-bottom: 20px;
 	}
 }
 //////////////////////인덱스 두번째 블록//////////////////////
@@ -581,32 +576,32 @@ body{
 		border-top: 1px solid $gray-color;
 		/*border-top: 1px solid #33CC99;*/
 	}
-	.bottom_fixed {
+	.bottom_fixed { 
 		width:980px;
 		max-width: 100%;
 		margin: 0 auto;
 		margin-top: 20px;
-	}
+	}   
 	.bottom_up {
 		margin-bottom: 20px;
 		text-align: center;
 	}
-	#bottom_go_top {
+	#bottom_go_top { 
 		cursor: pointer;
-	}
+	} 
 	.bottom_left {
-		float:left;
+		float:left; 
 		display: block;
-		padding-left: 10px;
-	}	
+		padding-left: 10px; 
+	}
 	.bottom_right {
 		float: right;
 		max-width: 100%;
-		padding-right: 10px;
-	}
+		padding-right: 10px; 
+	} 
 	.choose_lang {
 		padding-left: 20px;
-		background : url(./img/Resize_world_flags/WorldFlags/Korea-South.png) no-repeat left;	
+		background : url("\img\Resize_world_flags\WorldFlags\Korea-South.png") no-repeat left;
 		&:hover{
 			text-decoration: underline;
 		}
@@ -616,7 +611,7 @@ body{
 		border-top: 1px solid $gray-color;
 		margin-top: 10px;
 	}
-	.bottom_copy {		
+	.bottom_copy {
 		margin: 25px auto;
 		text-align: center;
 		vertical-align: middle;		

@@ -11,28 +11,32 @@
 <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="./css/index-style.css" />
 
-<!--<script src="../js/jQuery/jquery-3.1.1.slim.min.js"></script>-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>-->
-
+<script src="js/jQuery/jquery-3.1.1.min.js"></script>
+<script src="js/jQuery/jquery-migrate-3.0.0.js"></script>
+<!--
+<script src="/js/jQuery/jquery-ui.min.js"></script>
+<script src="/js/jQuery/jquery.mobile-1.4.5.min.js"></script>
+-->
 </head>
 <body>
 
 <!-- DOM의 변수명은 스네이크 케이스를 활용 -->
 <header id="floating_header">
-	<div id="floating_header_real">	
+	<div id="floating_header_nav" class="floating_header_real">	
 		<div class="floating_header_inner">
 			<div class="floating_header_inner_container">
 				<div class="floating_header_inner_container_contents">
 					<div class="floating_header_inner_container_contents_left">
 						<p class="menu_left">선진 기계</p>
 					</div>
-					<div class="floating_header_inner_container_contents_right_minimal">
-						<div class="floating_header_inner_container_contents_right_minimal_menu">									
-							<a href="#" class="small_menu">
-								<img src="./img/mobile_menu_list.png" alt="list_image">
-							</a>
-						</div>											
+					<div class="floating_header_inner_container_contents_right_minimal hidden-md hidden-lg">
+						<div class="input-group input-group-lg">
+							<input type="text" class="form-control" placeholder="찾기">
+							<span class="input-group-btn">
+								<button class="btn btn-default btn-lg" type="button"><span class="glyphicon glyphicon-search"></span></button>
+								<button class="small_menu btn btn-default btn-lg" type="button"><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+							</span>
+						</div>
 					</div>
 					<div class="floating_header_inner_container_contents_right hidden-sm hidden-xs">
 						<ol class="menu_right">
@@ -42,7 +46,7 @@
 							<li><a href="#" target="_blank">SUPPORT</a></li>
 							<li><a href="#" target="_blank">BLOG</a></li>							
 						</ol>						
-						<div class="floating_header_inner_container_contents_right_search">
+						<div class="floating_header_inner_container_contents_right_search hidden-sm hidden-xs">
 							<a href="#" target="_blank" class="glyphicon glyphicon-search"></a>
 						</div>
 					</div>					
@@ -51,42 +55,11 @@
 			</div>	
 		</div>		
 	</div>
-	<div id="floating_header_virtual">	
-		<div class="floating_header_inner">
-			<div class="floating_header_inner_container">
-				<div class="floating_header_inner_container_contents">
-					<div class="floating_header_inner_container_contents_left">
-						<p class="menu_left">선진 기계</p>
-					</div>
-					<div class="floating_header_inner_container_contents_right_minimal">
-						<div class="floating_header_inner_container_contents_right_minimal_menu">									
-							<a href="#" class="small_menu">
-								<img src="./img/mobile_menu_list.png" alt="list_image">
-							</a>
-						</div>									
-					</div>	
-					<div class="floating_header_inner_container_contents_right hidden-sm hidden-xs">
-						<ol class="menu_right">
-							<li><a href="#" target="_blank">ABOUT US</a></li>
-							<li><a href="#" target="_blank">PRODUCT</a></li>
-							<li><a href="#" target="_blank">PARTNERS</a></li>
-							<li><a href="#" target="_blank">SUPPORT</a></li>
-							<li><a href="#" target="_blank">BLOG</a></li>
-						</ol>
-						<div class="floating_header_inner_container_contents_right_search">
-							<a href="#" target="_blank" class="glyphicon glyphicon-search"></a>
-						</div>
-					</div>	
-				</div>				
-			</div>		
-		</div>
-		<div class="header_line"></div>
-	</div>
 </header>
 <main>
 <div class="select_first_div">		
-	<img src="./img/main-banner.png" alt="main_banner">
-	<div class="container first_div_title">		  	
+	<img src="./img/main-banner.png" alt="main_banner" class="img-responsive">
+	<div class="container first_div_title hidden-sm hidden-xs">		  	
 		<h1>튼튼하고 안전한 선진기계<br/><br/>
 			<small>항상 안전만 생각하며 제작 하였습니다.</small><br/>
 			<small>혁신! 그 이상의 혁신 적인 후드</small><br/>
@@ -94,6 +67,15 @@
 		<br/>
 		<br/>
 		<p><a class="btn btn-default btn-lg custom" href="#" role="button">자세히 보기 </a></p>
+	</div>
+	<div class="first_div_sub_title hidden-md hidden-lg">		  	
+		<h2>튼튼하고 안전한 선진기계<br/>
+			<small>항상 안전만 생각하며 제작 하였습니다.</small><br/>
+			<small>혁신! 그 이상의 혁신적인 후드</small><br/>
+		</h2>
+		<br/>
+		<br/>
+		<p><a class="btn btn-default" href="#" role="button">자세히 보기</a></p>
 	</div>
 </div>
 
@@ -156,7 +138,7 @@
 		<div class="bottom_inner">
 			<div class="bottom_fixed">
 				<div class="bottom_up">
-					<span id="bottom_go_top" class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+					<span id="bottom_go_top" class="glyphicon glyphicon-chevron-up btn-lg" aria-hidden="true"></span>
 				</div>
 				<div class="bottom_left">
 					<address>							
@@ -181,68 +163,67 @@
 /*********************************************************** 
 	1. Java Script variable is have to write by camelCase 
 ************************************************************/	
-	var $floatingHeaderReal = $("#floating_header_real");
-	var $floatingHeaderVir = $("#floating_header_virtual");
+	var $floatingHeaderReal = $("#floating_header_nav");
 	var $bottomGoTop = $("#bottom_go_top");
-	var $bodyScroll = $("html body") || $("html");
+	var $bodyScroll = $("html body");
 	var $smallMenu = $(".small_menu");
-    var $headerRightMenu = $(".floating_header_inner_container_contents_right");	
-	var $realHeaderSubRightMenu = $("#floating_header_real .menu_right");
-	var $virtualHeaderSubRightMenu = $("#floating_header_virtual .menu_right");
-	var $headerSearch = $(".floating_header_inner_container_contents_right_search");
+	var $menuRight = $(".menu_right");
+    var $headerRightMenu = $(".floating_header_inner_container_contents_right");
 	var $smallMenuDiv = $(".floating_header_inner_container_contents_right_minimal");
+	var $selectFirstDiv = $(".select_first_div");
 	
-	$(function(){				
+	$(function(){
+		/*$(window).load("html",function(){
+			$(this).trigger("resize");
+		})*/
+		
 		$bottomGoTop.click(function(e){
 			if(e.preventDefault){ 
 				e.preventDefault();
 			} else {
 				e.returnValue = false;
-			}			
-			$bodyScroll.stop().animate({scrollTop:"0"});			
+			}
+			$bodyScroll.animate({scrollTop:"0"});			
 		});
 		
 		$(window).scroll(function(){
 			var scrollPosition = $("html body").scrollTop() || $("html").scrollTop();
 						
-			if(scrollPosition > 0){
-				$floatingHeaderReal.fadeOut("slow");
-				$floatingHeaderVir.fadeIn("slow");				
-			}else{
-				$floatingHeaderVir.fadeOut("slow");
-				$floatingHeaderReal.fadeIn("slow");				
+			if(scrollPosition > 0 && $floatingHeaderReal.hasClass("floating_header_real")){				
+				$floatingHeaderReal.removeClass("floating_header_real").addClass("floating_header_virtual");
+			}
+			if(scrollPosition <= 0 && $floatingHeaderReal.hasClass("floating_header_virtual")){
+				$floatingHeaderReal.addClass("floating_header_real").removeClass("floating_header_virtual");
 			}
 		});
 		
 		$smallMenu.click(function(e){
 			if(e.preventDefault){ 
 				e.preventDefault();
-			} else {
+			}else{
 				e.returnValue = false;				
 			}
 			
-			if($headerRightMenu.hasClass("hidden-sm") || $headerRightMenu.hasClass("hidden-xs") === true){
+			if($headerRightMenu.hasClass("hidden-sm") || $headerRightMenu.hasClass("hidden-xs") === true){					
 				$headerRightMenu.removeClass("hidden-sm").removeClass("hidden-xs");
-				$realHeaderSubRightMenu.addClass("small_menu_right").removeClass("menu_right");
-				$virtualHeaderSubRightMenu.addClass("small_menu_right_scrolldown").removeClass("menu_right");
-				$headerSearch.addClass("small_menu_right_search").removeClass("floating_header_inner_container_contents_right_search");	
+				$menuRight.addClass("small_menu_right").removeClass("menu_right");
+				$headerRightMenu.hide();
+				$headerRightMenu.stop().slideToggle("slow");
 			}else{
-				$headerRightMenu.addClass("hidden-sm").addClass("hidden-xs");
-				$realHeaderSubRightMenu.removeClass("small_menu_right").addClass("menu_right");
-				$virtualHeaderSubRightMenu.removeClass("small_menu_right_scrolldown").addClass("menu_right");
-				$headerSearch.removeClass("small_menu_right_search").addClass("floating_header_inner_container_contents_right_search");
+				$headerRightMenu.stop().slideToggle("slow",function(){
+					$headerRightMenu.addClass("hidden-sm").addClass("hidden-xs");
+					$menuRight.removeClass("small_menu_right").addClass("menu_right");
+					$headerRightMenu.show();
+				});				
 			}
+			
 		});
 		
 		$(window).resize(function(){
 			if($smallMenuDiv.css("display") === "none"){
-				$realHeaderSubRightMenu.addClass("menu_right").removeClass("small_menu_right");
-				$virtualHeaderSubRightMenu.addClass("menu_right").removeClass("small_menu_right_scrolldown");
-				$headerSearch.addClass("floating_header_inner_container_contents_right_search").removeClass("small_menu_right_search");
+				$menuRight.removeClass("small_menu_right").addClass("menu_right");				
 			}else{
-				$realHeaderSubRightMenu.removeClass("menu_right").addClass("small_menu_right");
-				$virtualHeaderSubRightMenu.removeClass("menu_right").addClass("small_menu_right_scrolldown");
-				$headerSearch.removeClass("floating_header_inner_container_contents_right_search").addClass("small_menu_right_search");
+				$menuRight.addClass("small_menu_right").removeClass("menu_right");				
 			}
 		});
 	});
