@@ -144,23 +144,23 @@ body{
 			}
 		}
 	}
-	@mixin floating-header-nav{
+	@mixin floating-header-nav($bg-color:default){
 		position: fixed;
 		top: 0px;
 		left: 0px;
 		right: 0px;
-		z-index: 9999;
+		z-index: 1;
 		opacity: 0.93;
 		filter:alpha(opacity = 93);
 		display: block;
-		transition-property: color;
+		transition-property: background-color;
   		transition-duration: 2s;
+		background-color:$bg-color;
 	}
-	/////////////////////////////////// up to this point "Sass Mixin" ///////////////////////////////////
+	/////////////////////////////////// up to this point "Sass Mixin for FloatingHeader cass" ///////////////////////////////////
 	
 	.floating_header_real{
-		@include floating-header-nav;
-		background-color:$white-color;
+		@include floating-header-nav($white-color);		
 		
 		.floating_header_inner {
 			@include header-inner;
@@ -244,8 +244,7 @@ body{
 		}
 	}
 	.floating_header_virtual {
-		@include floating-header-nav;
-		background-color: $blue-color;		
+		@include floating-header-nav($blue-color);
 
 		.floating_header_inner {
 			@include header-inner;

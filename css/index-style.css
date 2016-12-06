@@ -18,11 +18,11 @@ body {
   top: 0px;
   left: 0px;
   right: 0px;
-  z-index: 9999;
+  z-index: 1;
   opacity: 0.93;
   filter: alpha(opacity=93);
   display: block;
-  transition-property: color;
+  transition-property: background-color;
   transition-duration: 2s;
   background-color: #FFFFFF; }
   #floating_header .floating_header_real .floating_header_inner {
@@ -146,11 +146,11 @@ body {
   top: 0px;
   left: 0px;
   right: 0px;
-  z-index: 9999;
+  z-index: 1;
   opacity: 0.93;
   filter: alpha(opacity=93);
   display: block;
-  transition-property: color;
+  transition-property: background-color;
   transition-duration: 2s;
   background-color: #33CC99; }
   #floating_header .floating_header_virtual .floating_header_inner {

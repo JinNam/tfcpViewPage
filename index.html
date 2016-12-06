@@ -13,6 +13,7 @@
 
 <script src="js/jQuery/jquery-3.1.1.min.js"></script>
 <script src="js/jQuery/jquery-migrate-3.0.0.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
 <!--<script src="/js/jQuery/jquery-ui.min.js"></script>-->
 <!--<script src="/js/jQuery/jquery.mobile-1.4.5.min.js"></script>-->
 </head>
@@ -158,10 +159,13 @@
 <script type="text/javascript">	
 /*********************************************************** 
 	1. Java Script variable is have to write by camelCase 
-************************************************************/	
+************************************************************/
+	var agent = navigator.userAgent.toLowerCase();
+	var msie = (navigator.appName == 'Netscape' && agent.indexOf('trident') != -1) || (agent.indexOf("msie") != -1);
+	
 	var $floatingHeaderReal = $("#floating_header_nav");
 	var $bottomGoTop = $("#bottom_go_top");
-	var $bodyScroll = $("html body");
+	var $body = (msie === true) ? $("html") : $("html body");
 	var $smallMenu = $(".small_menu");
 	var $menuRight = $(".menu_right");
     var $headerRightMenu = $(".floating_header_inner_container_contents_right");
@@ -169,37 +173,39 @@
 	var $selectFirstDiv = $(".select_first_div");
 	var $floatingSearch = $("#floating_search");
 	var $smallSearch = $(".small_search");
-	var searchSlidevar = 0;
+	//var searchSlideVar = $floatingSearch.css("width");
+	//var plusSearchSlideVar = Number($floatingSearch.css("width"))+Number($floatingSearch.css("width")/2)
 	
-	$(function(){		
+	$(function(){
 		$bottomGoTop.click(function(e){
-			if(e.preventDefault){ 
+			if(e.preventDefault){
 				e.preventDefault();
 			} else {
 				e.returnValue = false;
 			}
-			$bodyScroll.animate({scrollTop:"0"});			
+			
+			$body.animate({scrollTop:0},"swing");					
 		});
 		
 		$(window).scroll(function(){
-			var scrollPosition = $("html body").scrollTop() || $("html").scrollTop();
-						
-			if(scrollPosition > 0 && $floatingHeaderReal.hasClass("floating_header_real")){				
+			var bodyScroll = $body.scrollTop();
+			
+			if(bodyScroll > 0 && $floatingHeaderReal.hasClass("floating_header_real")){
 				$floatingHeaderReal.removeClass("floating_header_real").addClass("floating_header_virtual");
 			}
-			if(scrollPosition <= 0 && $floatingHeaderReal.hasClass("floating_header_virtual")){
+			if(bodyScroll <= 0 && $floatingHeaderReal.hasClass("floating_header_virtual")){
 				$floatingHeaderReal.addClass("floating_header_real").removeClass("floating_header_virtual");
 			}
 		});
 		
 		$smallMenu.click(function(e){
-			if(e.preventDefault){ 
+			if(e.preventDefault){
 				e.preventDefault();
 			}else{
-				e.returnValue = false;				
+				e.returnValue = false;
 			}
 			
-			if($headerRightMenu.hasClass("hidden-sm") || $headerRightMenu.hasClass("hidden-xs") === true){					
+			if($headerRightMenu.hasClass("hidden-sm") || $headerRightMenu.hasClass("hidden-xs") === true){
 				$headerRightMenu.removeClass("hidden-sm").removeClass("hidden-xs");
 				$menuRight.addClass("small_menu_right").removeClass("menu_right");
 				$headerRightMenu.hide();
@@ -209,48 +215,46 @@
 					$headerRightMenu.addClass("hidden-sm").addClass("hidden-xs");
 					$menuRight.removeClass("small_menu_right").addClass("menu_right");
 					$headerRightMenu.show();
-				});				
+				});
 			}
-			
 		});
 		
 		$(window).resize(function(){
 			if($smallMenuDiv.css("display") === "none"){
-				$menuRight.removeClass("small_menu_right").addClass("menu_right");				
+				$menuRight.removeClass("small_menu_right").addClass("menu_right");
 			}else{
-				$menuRight.addClass("small_menu_right").removeClass("menu_right");				
-			}
+				$menuRight.addClass("small_menu_right").removeClass("menu_right");
+			}			
 		});
 		
 		$floatingSearch.on("focus",function(){
-			searchSlidevar += 70;
-			if(searchSlidevar <= 70){
-				$floatingHeaderReal.find(".floating_header_inner_container_contents_left").hide();
-				$(this).animate({right:"+=70px",width:"+=70px",display:"block"},"swing");
-				$(this).siblings(".input-group-btn").animate({right:"+=70px"},"swing");	
-			}			
+			$floatingHeaderReal.find(".floating_header_inner_container_contents_left").hide();
+			$floatingSearch.animate({right:"+=50%",width:"+=50%",display:"block"},"swing");		
+			
+			//console.log(searchSlideVar+"fi"+$floatingSearch.css("width"));
 		});
 		
 		function floatingSearchFocusOut(){
-			searchSlidevar -= 70;
-			if(searchSlidevar <= 0){
-				$floatingHeaderReal.find(".floating_header_inner_container_contents_left").show();
-				$(this).animate({right:"-=70px",width:"-=70px",display:"inline-block"},"swing");
-				$(this).siblings(".input-group-btn").animate({right:"-=70px"},"swing");			
-			}			
+			
+			$floatingHeaderReal.find(".floating_header_inner_container_contents_left").show();
+			$floatingSearch.animate({right:"-=50%",width:"-=50%",display:"inline-block"},"swing");
+			
+			//console.log(searchSlideVar+"fo");
 		}
 		
 		$floatingSearch.on("focusout",floatingSearchFocusOut);
-		
+		/*
 		$smallSearch.on("mouseenter",function(){
-			$floatingSearch.off("focusout");
+			$floatingSearch.off("focusout",floatingSearchFocusOut);
 		});
 		
 		$smallSearch.on("mouseleave",function(){
+			setTimeout(floatingSearchFocusOut,2000);
 			$floatingSearch.on("focusout",floatingSearchFocusOut);
-		});
+			console.log("processing");			
+		});		*/
 		
-		$(window).trigger("scroll");
+		$(window).trigger("scroll");	
 	});
 </script>
 </body>
