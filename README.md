@@ -1,2 +1,7 @@
 # forgetes.github.io
-첫 번째 포트폴리오 (20% 진행중)
+SKill
+-sass
+-css 3.0
+-bootstrap
+-bootstrap for sass
+-jQuery

@@ -4,7 +4,8 @@
 @import "bootstrap-for-sass/stylesheets/bootstrap-compass";  */
  
 $blue-color: #33CC99;
-$gray-color: rgba(0, 0, 0, 0.15);
+$gray-color: rgb(235, 235, 235); /*rgba(0, 0, 0, 0.15)*/
+$light-gray-color: rgb(249, 249, 249);
 $white-color: #FFFFFF;
 $black-color: #000000;
 $ok-color: #33CC99;
@@ -12,7 +13,7 @@ $ok-color2: #33BB99;
 
 @mixin apply-font-type($font-style1:MyriadPro-Regular, $font-style2:'nanum gothic', $font-style3:sans-serif){
 	font-family: $font-style1, $font-style2;
-	src: url("\fonts\MyriadPro\#{$font-style1}.otf") format("truetype");
+	src: url("../fonts/MyriadPro/#{$font-style1}.otf") format("truetype");
 }
  
 body{
@@ -143,8 +144,7 @@ body{
 			}
 		}
 	}
-	
-	#floating_header_nav{
+	@mixin floating-header-nav{
 		position: fixed;
 		top: 0px;
 		left: 0px;
@@ -152,11 +152,16 @@ body{
 		z-index: 9999;
 		opacity: 0.93;
 		filter:alpha(opacity = 93);
-		display: block;		
-	}	
-	.floating_header_real{		
-		background:$white-color;		
-
+		display: block;
+		transition-property: color;
+  		transition-duration: 2s;
+	}
+	/////////////////////////////////// up to this point "Sass Mixin" ///////////////////////////////////
+	
+	.floating_header_real{
+		@include floating-header-nav;
+		background-color:$white-color;
+		
 		.floating_header_inner {
 			@include header-inner;
 		}
@@ -199,7 +204,7 @@ body{
 					}
 				}
 			}
-			/////////////// 휴대폰 및 테블릿/////////////////////////////
+			/////////////// 모바일 /////////////////////////////
 			.small_menu_right{
 				list-style: none;
 				display : block;
@@ -239,7 +244,8 @@ body{
 		}
 	}
 	.floating_header_virtual {
-		background-color: $blue-color;
+		@include floating-header-nav;
+		background-color: $blue-color;		
 
 		.floating_header_inner {
 			@include header-inner;
@@ -283,7 +289,7 @@ body{
 					}
 				}
 			}
-			/////////////// 휴대폰 및 테블릿/////////////////////////////
+			/////////////// 모바일 기기 /////////////////////////////
 			.small_menu_right{
 				list-style: none;
 				display: block;
@@ -341,18 +347,19 @@ body{
 	max-height: 100%;
 	box-sizing: border-box;
 	
-	@media only screen and (max-width: 991px) 
+	@media only screen and (max-width: 991px) //모바일 및 테블릿
 	{		
 		margin-top:77px;
 	}
-	@media only screen and (min-width: 992px)
+	@media only screen and (min-width: 992px) //제일 작은 데스크탑 부터
 	{		
 		margin-top:65px;
-	}	
+	}
 	
 	img{
 		max-width: 100%;
 		width: 100%;
+		height: 100%;
 		/*@extend .img-responsive;*/
 	}
 	.container.first_div_title{
@@ -380,88 +387,116 @@ body{
 		max-height: 100%;
 		max-width: 100%;
 		text-align: center;
-		border-bottom: 1px solid $gray-color;
 		padding-bottom: 20px;
+		padding-left: 5px;
+		padding-right: 5px;
 	}
 }
 //////////////////////인덱스 두번째 블록//////////////////////
-.select_middle_div{	
-	@mixin container_1($container-width:default,$sub-marjin:30px, $title-font-size:15px,$h1-size:default){
-		.container_1{
-			box-sizing: border-box;
-			max-width: 100%;
-			margin: 0 auto;
-			position: relative;
-			/*top: 50%;
-			transform: translateY(-50%);
-			vertical-align: middle;*/
-			padding-left: 20px;
-			padding-right: 20px;
-			width: $container-width;
-			
-			.middle_subject{
-				width: 100%;
-				margin: $sub-marjin;
-	
-				.subject_title{
-					margin: 0 auto;
-				}
-				P{
-					font-size: $title-font-size;
-				}
-				h1{
-					font-size: $h1-size;
-				}
-			}			
-		}
+.select_middle_div{
+	@mixin container-setting($container-width:default, $sub-marjin:30px, $title-font-size:15px, $h1-size:default, $bg-color:default, $padding-top:default){
+		box-sizing: border-box;
+		max-width: 100%;
+		margin: 0 auto;
+		position: relative;			
+		padding-left: 20px;
+		padding-right: 20px;
+		width: $container-width;
+		background-color:$bg-color;
+		padding-top: $padding-top;
+
+		.middle_subject{
+			width: 100%;
+			margin: $sub-marjin;
+			margin-bottom: 10px;
+
+			.subject_title{
+				margin: 0 auto;
+			}
+			P{
+				font-size: $title-font-size;
+			}
+			h1{
+				font-size: $h1-size;
+			}
+		}	
 	}
-		
+	
+	@mixin img-setting{
+		display: inline;
+		max-height: 100%;
+		max-width: 100%;
+		-webkit-border-top-left-radius: 5px;
+		-moz-border-radius-topleft: 5px;
+		border-top-left-radius: 5px;
+		-webkit-border-top-right-radius: 5px;
+		-webkit-background-clip: padding-box;
+		-moz-border-radius-topright: 5px;
+		-moz-background-clip: padding;
+		padding: 2px;
+	}
+	 
     text-align: center;	
 	box-sizing: border-box;
-	padding-top: 50px;
-	height: 600px;
+	height: 100%;
 	
-	@media only screen and (max-width: 1023px) 
-	{		
-		@include container_1(default,default,default,30px);
-		height: 100%;
+	@media only screen and (max-width: 767px){		
+		.container_1{
+			@include container-setting(default,10px,default,30px,$light-gray-color,20px);
+		}
+	}	
+	@media only screen and (min-width: 768px) and (max-width: 991px){
+		.container_1{
+			@include container-setting(980px,10px,13px,30px,$light-gray-color,20px);
+		}
+	}	
+	@media only screen and (min-width: 992px){
+		.container_1{
+			@inculde container-setting(1050px);
+			padding-top: 50px;
+		}
+	}	
+	.card.java .title {	
+		height: 160px;
+		img{
+			@include img-setting;	
+		}
 	}
-	@media only screen and (max-width: 1200px) and (min-width: 1024px)
-	{		
-		@include container_1(980px,15px,13px,30px);		
+	.card.php .title {
+		height: 160px;
+		img{
+			@include img-setting;	
+		}
 	}
-	@media only screen and (min-width: 1201px)
-	{		
-		@inculde container_1(1050px);		
+	.card.dotnet .title {
+		height: 160px;
+		img{
+			@include img-setting;	
+		}
 	}
-}
+	
+	.card-list {
+		display: inline-block;    	    
+		box-sizing: border-box;
+		text-align: center;	
+		overflow: hidden;
+		margin: 0 auto;
 
-.select_middle_div .card-list {
-    display: inline-block;    	    
-	box-sizing: border-box;
-	text-align: center;	
-	overflow: hidden;
-	margin: 0 auto;
+		@media only screen and (max-width: 767px) {		
+			padding-top: 10px;
+			margin-left: 10px;
+			margin-right: 10px;
+			padding-bottom: 10px;		
+		}
+		@media only screen and (max-width: 991px) and (min-width: 768px){
+			width: 780px;
+		}
+		@media only screen and (min-width: 992px){
+			width: 1025px;
+		}	
+	}
 	
-	@media only screen and (max-width: 1023px) 
-	{
-		padding-top: 10px;
-		margin-left: 10px;
-		margin-right: 10px;
-		padding-bottom: 10px;	
-	}
-	@media only screen and (max-width: 1200px) and (min-width: 1024px)
-	{		
-		/*padding: 30px;*/
-		width: 780px;
-	}
-	@media only screen and (min-width: 1201px)
-	{/*
-		margin-left: -40px;*/
-		width: 1025px;
-	}
-}
-.select_middle_div .card {
+	.card {
     	-webkit-border-radius: 5px;
 		-webkit-background-clip: padding-box;
 		-moz-border-radius: 5px;
@@ -479,88 +514,75 @@ body{
 		min-height: 330px;
 		max-height: 400px;
 	
-	@media only screen and (max-width: 1200px) and (min-width: 1024px)
-	{
-		display: block;
-		float: left;
-		width: 240px;
-		margin: 10px;
+		@media only screen and (max-width: 991px) and (min-width: 768px){
+			display: block;
+			float: left;
+			width: 240px;
+			margin: 10px;
+		}
+		@media only screen and (min-width: 992px){
+			display: block;
+			float: left;
+			width: 300px;
+			margin: 20px;
+		}
 	}
-	@media only screen and (min-width: 1201px)
-	{
-		display: block;
-		float: left;
-		width: 300px;
-		margin: 20px;
-	}
-}
-.select_middle_div .card.java .title {
-  //  background: #ff6e6e;
-}
-.select_middle_div .card.php .title {
-//    background: #ff6e6e;
-}
-.select_middle_div .card.dotnet .title {
-   /* background: #ff6e6e;*/
-}
-  
-.select_middle_div .card .title {
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    -webkit-border-top-left-radius: 5px;
-    -moz-border-radius-topleft: 5px;
-    border-top-left-radius: 5px;
-    -webkit-border-top-right-radius: 5px;
-    -webkit-background-clip: padding-box;
-    -moz-border-radius-topright: 5px;
-    -moz-background-clip: padding;
-    border-top-right-radius: 5px;
-    background-clip: padding-box;
-    color: $white-color;
-	box-sizing: border-box;	
-	border-bottom: 1px solid #ddd;
-}
-
-.select_middle_div .card .body {
-    padding: 5px;
-    font-size: 13px;
-    -webkit-border-bottom-left-radius: 5px;
-    -moz-border-radius-bottomleft: 5px;
-    border-bottom-left-radius: 5px;
-    -webkit-border-bottom-right-radius: 5px;
-    -webkit-background-clip: padding-box;
-    -moz-border-radius-bottomright: 5px;
-    -moz-background-clip: padding;
-    border-bottom-right-radius: 5px;
-    background-clip: padding-box;
-	box-sizing: border-box;
-}
-.middle_a_btn{
-	font-size: 8px;
-	line-height: 1.5;
-    display: inline-block;
-    font-size: 14px;
-    padding: 4px 16px;
-    border-radius: 4px;
-    color: $white-color;
-    border: 1px solid $ok-color;
-    background: $ok-color2;
-    font-weight: 400;
-	margin-bottom: 10px;
 	
-	&:visited{
-		text-decoration: none;
+	.card .title {
+		text-align: center;
+		-webkit-border-top-left-radius: 5px;
+		-moz-border-radius-topleft: 5px;
+		border-top-left-radius: 5px;
+		-webkit-border-top-right-radius: 5px;
+		-webkit-background-clip: padding-box;
+		-moz-border-radius-topright: 5px;
+		-moz-background-clip: padding;
+		border-top-right-radius: 5px;
+		background-clip: padding-box;
 		color: $white-color;
+		box-sizing: border-box;	
+		border-bottom: 1px solid #ddd;
 	}
-	&:link{
-		@extend :visited; 
-	}
-	&:active{
-		@extend :visited;
-	}
-	&:hover{
-		@extend :visited;
+	.card .body {
+		padding: 5px;
+		font-size: 13px;
+		-webkit-border-bottom-left-radius: 5px;
+		-moz-border-radius-bottomleft: 5px;
+		border-bottom-left-radius: 5px;
+		-webkit-border-bottom-right-radius: 5px;
+		-webkit-background-clip: padding-box;
+		-moz-border-radius-bottomright: 5px;
+		-moz-background-clip: padding;
+		border-bottom-right-radius: 5px;
+		background-clip: padding-box;
+		box-sizing: border-box;
+	}	
+	.middle_a_btn{
+		font-size: 8px;
+		line-height: 1.5;
+		display: inline-block;
+		font-size: 14px;
+		padding: 4px 16px;
+		border-radius: 4px;
+		color: $white-color;
+		border: 1px solid $ok-color;
+		background: $ok-color2;
+		font-weight: 400;
+		margin-bottom: 10px;
+
+		&:visited{
+			text-decoration: none;
+			color: $white-color;
+		}
+		&:link{
+			@extend :visited; 
+		}
+		&:active{
+			@extend :visited;
+		}
+		&:hover{
+			@extend :visited;
+		}
 	}
 }
 
@@ -615,5 +637,5 @@ body{
 		margin: 25px auto;
 		text-align: center;
 		vertical-align: middle;		
-	}	
+	}
 }
