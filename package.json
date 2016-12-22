@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/forgetes/forgetes.github.io"
+    "url": "git+https://github.com/forgetes/forgetes-source"
   },
   "keywords": [
     "sjtech"
@@ -16,13 +16,14 @@
   "author": "yyj",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/forgetes/forgetes.github.io/issues"
+    "url": "https://github.com/forgetes/forgetes-source/issues"
   },
-  "homepage": "https://github.com/forgetes/forgetes.github.io#readme",
+  "homepage": "https://github.com/forgetes/forgetes-source#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-connect": "^5.0.0",
     "gulp-html-ssi": "0.0.92",
+    "gulp-out": "0.0.1",
     "gulp-sass": "^3.0.0",
     "gulp-uglify": "^2.0.0"
   }
