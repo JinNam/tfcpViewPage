@@ -1,4 +1,5 @@
-<a href="https://forgetes.github.io"># forgetes.github.io</a>
+# forgetes.github.io
+<a href="https://forgetes.github.io">go page</a>
 <h3>tech</h3>
 <ol>
 	<li>-JavaScript<br/></li>
