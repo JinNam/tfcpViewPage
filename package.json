@@ -1,0 +1,29 @@
+{
+  "name": "tfcp",
+  "version": "1.0.0",
+  "description": "first company projext",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/forgetes/forgetes.github.io"
+  },
+  "keywords": [
+    "sjtech"
+  ],
+  "author": "yyj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/forgetes/forgetes.github.io/issues"
+  },
+  "homepage": "https://github.com/forgetes/forgetes.github.io#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-html-ssi": "0.0.92",
+    "gulp-sass": "^3.0.0",
+    "gulp-uglify": "^2.0.0"
+  }
+}
