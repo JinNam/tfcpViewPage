@@ -17,7 +17,48 @@
 
 <!-- DOM의 변수명은 스네이크 케이스를 활용 -->
 <!-- top area -->
-<!--#includefile="common-src/_top.html"-->
+<header id="floating_header">
+	<div id="floating_header_nav" class="floating_header_real">	
+		<div class="floating_header_inner">
+			<div class="floating_header_inner_container">
+				<div class="floating_header_inner_container_contents">
+					<div class="floating_header_inner_container_contents_left">
+						<p class="menu_left"><img src="./img/sjtech.PNG" alt="main-logo"></p>
+					</div>
+					<div class="floating_header_inner_container_contents_right_minimal hidden-md hidden-lg">
+						<div class="input-group input-group-md">
+							<input type="text" id="floating_search" class="form-control" placeholder="원하는 내용 찾기">
+							<span class="input-group-btn">
+								<button class="small_search btn btn-default btn-md" type="button"><span class="glyphicon glyphicon-search"></span></button>
+								<button class="small_menu btn btn-default btn-md" type="button"><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+							</span>
+						</div>
+					</div>
+					<div class="floating_header_inner_container_contents_right hidden-sm hidden-xs">
+						<ol class="menu_right">
+							<li><a href="#" target="_blank">ABOUT US</a></li>
+							<li><a href="#" target="_blank">PRODUCT</a></li>
+							<li><a href="#" target="_blank">PARTNERS</a></li>
+							<li><a href="#" target="_blank">SUPPORT</a></li>
+							<li><a href="#" target="_blank">BLOG</a></li>							
+						</ol>
+						<div class="floating_search_big_text hidden-sm hidden-xs">
+							<div class="input-group input-group-sm">
+								<span class="input-group-addon"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
+								<input type="text" id="search_big_text" class="form-control" placeholder="원하는 내용 찾기">
+								<!--<span class="glyphicon glyphicon-remove form-control-feedback remove_btn" aria-hidden="true"></span>-->
+							</div>							
+						</div>
+						<div class="floating_header_inner_container_contents_right_search hidden-sm hidden-xs">
+							<a href="#" id="floating_search_big_btn" target="_blank" class="glyphicon glyphicon-search"></a>
+						</div>						   
+					</div>					
+				</div>
+				<div class="header_line"></div>
+			</div>	
+		</div>		
+	</div>
+</header>
 <main>
 <!-- 첫 번째 블럭 -->
 <div class="select_first_div">		
@@ -25,7 +66,7 @@
 	<div class="container first_div_title hidden-sm hidden-xs">		  	
 		<h1>튼튼하고 안전한 선진기계<br/><br/>
 			<small>항상 안전만 생각하며 제작 하였습니다.</small><br/>
-			<small>혁신! 그 이상의 혁신 적인 후드</small><br/>
+			<small>혁신! 그 이상의 혁신 적인 후드rrrr</small><br/>
 		</h1>
 		<br/>
 		<br/>
@@ -94,7 +135,29 @@
 </main>
 
 <!-- bottom area -->
-<!--#includefile="common-src/_bottom.html" -->
+<bottom>
+	<div class="bottom_div">
+		<div class="bottom_inner">
+			<div class="bottom_fixed">
+				<div class="bottom_up">
+					<span id="bottom_go_top" class="glyphicon glyphicon-chevron-up btn-lg" aria-hidden="true"></span>
+				</div>
+				<div class="bottom_middle">
+					<div class="bottom_left">
+						서울특별시 구로구 신도림로11길 8-17 <kbd>선진기계</kbd> | 대표이사: 윤 완 선 |
+						<abbr title="Phone">Tel:</abbr> 02-2677-5950 | <abbr title="Phone">Fax:</abbr> 02-2677-5950
+						<div class="choose_lang hidden-md hidden-lg">대한민국</div>
+					</div>
+					<div class="bottom_right hidden-sm hidden-xs">
+						<div class="choose_lang">대한민국</div>
+					</div>
+				</div>	
+				<div class="bottom_line_down"></div>	
+				<p class="bottom_copy"><samp>Copyright © 2016 <mark>tfcp</mark> Corp.</samp><br/><samp>본 페이지는 <strong>백수</strong>가 학습용으로 제작 하였습니다. 불편하신 점이 있으면 바로 조치하도록 하겠습니다.</samp> <br/>본 페이지는 크롬 최신버전에 최적화 되어 있습니다.</p>
+			</div>
+		</div>
+	</div>
+</bottom>
 
 <script src="js/jQuery/jquery-3.1.1.min.js"></script>
 <script src="js/jQuery/jquery-migrate-3.0.0.js"></script>
