@@ -1,3 +1,10 @@
+#tfcp
+dist/
+node_modules/
+world_flags/
+.sass-cache/
+bootstrap-for-sass/
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
