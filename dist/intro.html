@@ -1,14 +1,140 @@
 <!DOCTYPE html>
 <html lang="ko-KR">
 <head>
-
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1", "user-scalable=yes">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>SJ TECH</title>
 
+<link rel="stylesheet" type="text/css" href="./css/bootstrap-theme.min.css" />
+<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="./css/common-style.css" />
+<link rel="shortcut icon" href="./img/sjtechfavicon.ico">
+
 </head>
-<body>
+<body> 
+<!-- DOM의 변수명은 스네이크 케이스를 활용 -->
+<!-- top area --> 
+<header id="floating_header">
+	<div id="floating_header_nav" class="floating_header_real">	
+		<div class="floating_header_inner">
+			<div class="floating_header_inner_container">
+				<div class="floating_header_inner_container_contents">
+					<div class="search_hideen_bar hidden-md hidden-lg">
+						<div class="input-group input-group-md">
+							<input type="text" class="search_text_minimal form-control" placeholder="원하는 내용 찾기">
+							<span class="input-group-btn">
+								<button class="small_search btn btn-default btn-md" type="button"><span class="glyphicon glyphicon-search"></span></button>
+							</span>
+						</div>
+					</div> 
+					<div class="floating_header_inner_container_contents_left">
+						<p class="menu_left"><a href="../index.html"><img src="./img/sjtechlogo.png" alt="main-logo" class="img-responsive"></a></p>
+					</div>				
+					<div class="floating_header_inner_container_contents_right_minimal hidden-md hidden-lg">
+						<div>
+							<a href="#" id="floating_search"><span id="fsglyphicon" class="glyphicon glyphicon-search"></span></a>
+						</div>
+						<div>
+							<a href="#" class="small_menu"><span class="glyphicon glyphicon-menu-hamburger"></span></a>
+						</div>
+					</div>
+					<div class="floating_header_inner_container_contents_right hidden-sm hidden-xs">
+						<ol class="menu_right">
+							<li><a href="../intro.html" target="_self">ABOUT US</a></li>
+							<li><a href="../product.html" target="_self">PRODUCT</a></li>
+							<li><a href="../partners.html" target="_self">PARTNERS</a></li>
+							<li><a href="../support.html" target="_self">SUPPORT</a></li>
+							<li><a href="../blog.html" target="_self">BLOG</a></li>							
+						</ol>
+						<div class="floating_search_big_text hidden-sm hidden-xs">
+							<div class="input-group input-group-sm">
+								<span class="input-group-addon"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
+								<input type="text" id="search_big_text" class="form-control" placeholder="원하는 내용 찾기">
+								<!--<span class="glyphicon glyphicon-remove form-control-feedback remove_btn" aria-hidden="true"></span>-->
+							</div>							
+						</div>
+						<div class="floating_header_inner_container_contents_right_search hidden-sm hidden-xs">
+							<a href="#" id="floating_search_big_btn" target="_blank" class="glyphicon glyphicon-search"></a>
+						</div>						   
+					</div>					
+				</div>
+				<div class="header_line"></div>
+			</div>	
+		</div>		
+	</div>
+</header>
+<main>
+	<div class="row">
+		<div class="col-xs-6 col-md-4" stlye="width:300px;">
+			<div class="thumbnail">
+				<img src="./img/profile.JPG" alt="profile_picture" class="img-circle">
+				<div class="caption">
+					<h3>안녕하세요.</h3>
+					<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>			
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-md-8">			
+			<div class="panel panel-warning">			
+				<div class="panel-heading">역사</div>
+  				<div class="panel-body">Panel footer</div>
+			</div>
+			<div class="panel panel-success">
+				<div class="panel-heading">위치</div>
+  				<div class="panel-body"><div id="map" style="width:500px;height:400px;"></div>
+  				</div>
+			</div>
+			<div class="panel panel-info">
+				<div class="panel-heading">다국어 지원</div>
+  				<div class="panel-body">
+  					우리는 대한민국어를 지원합니다.
+  					차후엔 영어,일어를 지원할 생각입니다.
+  				</div>
+			</div>
+		</div>	
+	</div>	
+</main>
+<!-- bottom area -->
+<bottom>
+	<div class="bottom_div">
+		<div class="bottom_inner">
+			<div class="bottom_fixed">
+				<div class="bottom_up">
+					<span id="bottom_go_top" class="glyphicon glyphicon-chevron-up btn-lg" aria-hidden="true"></span>
+				</div>
+				<div class="bottom_middle">
+					<div class="bottom_left">
+						서울특별시 구로구 신도림로11길 8-17 <kbd>선진기계</kbd> | 대표이사: 윤 완 선 |
+						<abbr title="Phone">Tel:</abbr> 02-2677-5950 | <abbr title="Phone">Fax:</abbr> 02-2677-5950
+						<div class="choose_lang hidden-md hidden-lg">대한민국</div>
+					</div>
+					<div class="bottom_right hidden-sm hidden-xs">
+						<div class="choose_lang">대한민국</div>
+					</div>
+				</div>	
+				<div class="bottom_line_down"></div>	
+				<p class="bottom_copy"><samp>Copyright © 2016 <mark>tfcp</mark> Corp.</samp><br/><samp>본 페이지는 <strong>백수</strong>가 학습용으로 제작 하였습니다. 불편하신 점이 있으면 바로 조치하도록 하겠습니다.</samp> <br/>본 페이지는 크롬 최신버전에 최적화 되어 있습니다.</p>
+			</div>
+		</div>
+	</div>
+</bottom>
+<script src="js/jQuery/jquery-3.1.1.min.js"></script>
+<script src="js/jQuery/jquery-migrate-3.0.0.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+<!--<script src="/js/jQuery/jquery-ui.min.js"></script>-->
+<!--<script src="/js/jQuery/jquery.mobile-1.4.5.min.js"></script>-->
+<script type="text/javascript" src="/js/top-and-bottom.js"></script>
+<script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=022ded60e4849b0a26c9949d7b3b58be"></script>
+<script type="text/javascript">	
+	var container = document.getElementById('map');
+	var options = {
+		center: new daum.maps.LatLng(37.5090882, 126.8801865),
+		level: 3
+	};
+	var map = new daum.maps.Map(container, options);
 	
+	window.onload = map;
+</script>
 </body>
 </html>

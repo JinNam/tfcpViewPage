@@ -14,7 +14,8 @@
 	var $floatingSearch = $("#floating_search");
 	var $floatingSearchBigBtn = $("#floating_search_big_btn");
 	var $floatingSearchBigText = $(".floating_search_big_text");
-	
+	var $searchHideenBar = $(".search_hideen_bar");
+
 	$(function(){
 		$("#bottom_go_top").click(function(e){
 			if(e.preventDefault){
@@ -36,16 +37,19 @@
 			}
 		});
 		
-		$smallMenu.click(function(e){
-			if(e.preventDefault){
-				e.preventDefault();
+		$(window).resize(function(){
+			if($smallMenuDiv.css("display") === "none"){
+				$menuRight.removeClass("small_menu_right").addClass("menu_right");
 			}else{
-				e.returnValue = false;
+				$menuRight.addClass("small_menu_right").removeClass("menu_right");
 			}
-			
+		});
+		
+		//모바일 메뉴 클릭
+		$smallMenu.click(function(e){			
 			if($headerRightMenu.hasClass("hidden-sm") || $headerRightMenu.hasClass("hidden-xs") === true){
 				$headerRightMenu.removeClass("hidden-sm").removeClass("hidden-xs");
-				$menuRight.addClass("small_menu_right").removeClass("menu_right");
+				$menuRight.addClass("small_menu_right").removeClass("menu_right")
 				$headerRightMenu.hide();
 				$headerRightMenu.stop().slideToggle("slow");
 			}else{
@@ -56,26 +60,18 @@
 				});
 			}
 		});
-		
-		$(window).resize(function(){
-			if($smallMenuDiv.css("display") === "none"){
-				$menuRight.removeClass("small_menu_right").addClass("menu_right");
-			}else{
-				$menuRight.addClass("small_menu_right").removeClass("menu_right");
-			}
-		});
-		
+				
 		//모바일 버전 찾기 버튼
-		$floatingSearch.on("focus",function(){			
-			$floatingHeaderReal.find(".floating_header_inner_container_contents_left").hide();
-			$floatingSearch.animate({right:"+=50%",width:"+=50%",display:"block"},"swing");
+		$floatingSearch.on("click",function(){
+			$searchHideenBar.toggle();
+			
+			if($searchHideenBar.css("display") === "none"){
+				$("#fsglyphicon").addClass("glyphicon-search").removeClass("glyphicon-remove");
+			}else{				
+				$("#fsglyphicon").addClass("glyphicon-remove").removeClass("glyphicon-search");
+			}
 		});	
-		
-		$floatingSearch.on("focusout",function(){
-			$floatingHeaderReal.find(".floating_header_inner_container_contents_left").show();
-			$floatingSearch.animate({right:"-=50%",width:"-=50%",display:"inline-block"},"swing");		
-		});
-		
+						
 		//피씨 버전 찾기 버튼
 		$floatingSearchBigBtn.on("click",function(e){
 			if(e.preventDefault){
@@ -87,15 +83,15 @@
 			if($floatingSearchBigText.css("display") === "none"){				
 				$floatingHeaderReal.css({"opacity":"1"});
 				$floatingSearchBigText.css("display","inline-block");
-				$menuRight.css("visibility","hidden");
+				//$menuRight.css("visibility","hidden");
 				$(this).removeClass("glyphicon glyphicon-search").addClass("glyphicon glyphicon-menu-hamburger");
 			}else{
 				$floatingHeaderReal.css({"opacity":"0.93"});
 				$floatingSearchBigText.css("display","none");
-				$menuRight.css("visibility","");
+				//$menuRight.css("visibility","");
 				$(this).removeClass("glyphicon glyphicon-menu-hamburger").addClass("glyphicon glyphicon-search");
 			}
-		})
+		});
 		
 		$(window).trigger("scroll");		
 	});
