@@ -2,7 +2,8 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     connect = require('gulp-connect'),
  	ssi = require('gulp-html-ssi'),
-	uglify = require('gulp-uglify');
+	uglify = require('gulp-uglify'),
+	runSequence = require('run-sequence');
 	//out = require('gulp-out'); //파일명에 min 붙임
 
 var JS = 'js',
@@ -77,5 +78,13 @@ gulp.task('watch', function(){
 	gulp.watch('./dev/fonts/**/*.*',['fonts']);	
 });
 
-gulp.task('default', ['sass','html','htmlSSI','connect','img','fonts','watch']);
+//빌드
+gulp.task('build', ['sass', 'htmlSSI']);
 
+//gulp를 실행하면 수행할 default 작업
+gulp.task('default', function (done) {
+	//빌드(uglify, minifycss, minifyhtml)를 병렬로 수행한 뒤, 그 다음 server 와 watch 를 병렬로 수행
+	return runSequence('build', ['html','img','fonts','connect','watch']);
+});
+
+//참고 https://github.com/eu81273/gulp-step-by-step/blob/master/step13_run_sequence/gulpfile.js
