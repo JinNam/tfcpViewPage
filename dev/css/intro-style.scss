@@ -2,7 +2,8 @@
 
 .main_contents {
 	padding-top:20px;
-	.sub_contents{		
+	.sub_contents{
+		//프로필 영역
 		&:nth-child(1){	
 		/*	position: relative;
 			min-height: 1px;
@@ -10,45 +11,50 @@
 			padding-left: 15px;
 			float:left;*/
 			@media only screen and (max-width: 767px){		
-				width:100%;
+				width: 100%;
 			}
-			@media only screen and (min-width: 768px){
-				width:100%;
+			@media only screen and (min-width: 768px) and (max-width: 991px){
+				width: 100%;
 			}
 			@media only screen and (min-width: 992px){
 				width: 33.33333333%;
 			}
 			.owner_profile{
-				@media only screen and (max-width: 767px){		
-					width:90%;
-					margin: 0 auto;
-				}	
-				@media only screen and (min-width: 768px){
-					width:750px;
+				@media only screen and (max-width: 991px){
+					width: 90%;
 					margin: 0 auto;
 				}
-				@media only screen and (min-width: 992px){
-					width:250px;
-					margin: 0 0 0 auto;
+				@media only screen and (min-width: 992px) and (max-width: 1199px){
+				    width: 80%;
+					margin: auto 0 auto auto;
 				}	
+				@media only screen and (min-width: 1200px){
+					width: 50%;
+					margin: 0 0 0 auto;
+				}
 			}
 		}
+		//히스토리 컨테이너 영역
 		&:nth-child(2){			
-			@media only screen and (min-width: 768px){
+			@media only screen and (max-width: 991px){
 				padding-top: 25px;
 			}
 			@media only screen and (min-width: 992px){
 				padding-top: 0;
 			}
-			.owner_intro{				
-				@media only screen and (max-width: 767px){
+			.owner_intro{			
+				@media only screen and (max-width: 991px){
 				    width: 90%;
     				margin: 0 auto;
 				}	
-				@media only screen and (min-width: 768px){
-					width:750px;
+				@media only screen and (min-width: 992px) and (max-width: 1199px){
+				    width: 90%;
+    				margin: auto auto auto 0;
+				}	
+				@media only screen and (min-width: 1200px){
+					width: 75%;
 					margin: 0;
-				}			
+				}
 				.info_contents{
 					min-height: 250px;
 					max-width: 100%;
