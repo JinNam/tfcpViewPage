@@ -97,5 +97,15 @@
 			}
 		})
 		
-		$(window).trigger("scroll");		
+		$(window).trigger("scroll");	
+		
+		$(".menu_left").on("click",function(e){
+			if(e.preventDefault){
+				e.preventDefault();
+			} else {
+				e.returnValue = false;
+			}
+			
+			document.location.href = "../index.html";
+		})
 	});

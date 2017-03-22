@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=11,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+<title>SJ TECH</title>
+<!--
+<link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/3/w3.css">-->
+<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="./css/index-style.css" />
+<link rel="stylesheet" type="text/css" href="./css/intro-style.css" />
+<link rel="shortcut icon" href="./img/sjtechfavicon.ico">
+
+<style>
+	.mySlides {
+		display:none;
+		width:100%;
+	}
+	.view-partner {
+		cursor:pointer;
+		width:100%;
+	}
+	.my-content{
+		overflow-x: hidden;
+		position: relative;
+		margin: 1px;
+		padding: 0;
+	}
+	.logo-col{
+		width: 10000px;
+		transition-duration: 3s;
+		-webkit-transition-duration: 3s;
+		margin: 0;
+		padding: 0;
+		transform-origin: 0px 0px 0px;
+		transform:translate3d(0, 0px, 0px);
+		/*Translate along all the axis(x, y, z)*/
+		-webkit-transform:translate3d(0, 0px, 0px);
+	}
+	.w3-content{
+		max-width:980px;
+		margin:auto;
+	}
+	.w3-content-yop{
+		/*position: relative;*/
+		max-height: 400px;
+	}
+	.w3-section{
+		/*margin-left: 2px;*/
+		margin-top:16px!important;
+		margin-bottom:16px!important;
+	}
+	@media (max-width: 991px) {
+		.logo-col{
+			display: none;
+		}
+	}
+	@media (min-width: 992px){
+		.logo-col{
+			display: block;
+		}
+		.logo-col li{
+			width: 315px;
+			display: inline-block;
+			float: left;
+			margin: 10px 7px 10px 5px;
+			background-color: rgba(255, 255, 255, 0.9);
+			border: 1px solid #eee;
+			border-radius: 5px;
+			background-clip: padding-box;
+			box-shadow: 0px 5px 30px rgba(45, 29, 29, 0.25);
+		}
+	}
+	.w3-opacity,.w3-hover-opacity:hover{
+		opacity:0.60;
+		-webkit-backface-visibility:hidden
+	}
+	.w3-opacity-off,.w3-hover-opacity-off:hover{
+		opacity:1;
+		-webkit-backface-visibility:hidden
+	}
+	.w3-opacity-max{
+		opacity:0.25;
+		-webkit-backface-visibility:hidden
+	}
+	.w3-opacity-min{
+		opacity:0.75;
+		-webkit-backface-visibility:hidden
+	}
+	.w3-display-left{
+		position:absolute;
+		top:50%;
+		left:0%;
+		transform:translate(0%,-50%);
+		-ms-transform:translate(-0%,-50%)
+	}
+	.w3-display-right{
+		position:absolute;
+		top:50%;
+		right:0%;
+		transform:translate(0%,-50%);
+		-ms-transform:translate(0%,-50%)
+	}
+	.w3-button{
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		color: #000;
+		background-color: #f1f1f1;
+		padding: 8px 16px;
+		opacity:0.75;
+	}
+	.w3-button{
+		border:none;
+		display:inline-block;
+		outline:0;
+		padding:6px 16px;
+		vertical-align:middle;
+		overflow:hidden;
+		text-decoration:none!important;
+		text-align:center;
+		cursor:pointer;
+		white-space:nowrap
+	}
+	.w3-button:hover{
+		color:#000!important;
+		background-color:#ccc!important
+	}
+</style>
+</head>
+<body>
+<!-- top area --> 
+<!--#includefile="common-src/_top.html"-->
+
+<main>
+<h1 style="text-align:center;">선진과 함께하는 성공적인 파트너쉽 입니다.</h1>
+<h3 style="text-align:center;">다양한 산업군에서 함께해 주십니다.</h3>
+<div class="w3-content" style="max-width:1000px">
+	<div class="w3-content-yop">
+		<button class="w3-button w3-display-left" value="-1">&#10094;</button>
+		<img class="mySlides img-responsive" src="./img/logo/adidas.jpg" >
+		<img class="mySlides img-responsive" src="./img/logo/google.jpg" >
+		<img class="mySlides img-responsive" src="./img/logo/gsshop.jpg" >
+		<img class="mySlides img-responsive" src="./img/logo/lgcnsnew.gif" >
+		<img class="mySlides img-responsive" src="./img/logo/marvel.JPG" >
+		<img class="mySlides img-responsive" src="./img/logo/nike.jpg" >
+		<img class="mySlides img-responsive" src="./img/logo/pixar.JPG" >
+		<img class="mySlides img-responsive" src="./img/logo/samsung.jpg" >
+		<img class="mySlides img-responsive" src="./img/logo/waltdisney.jpg" >
+		<button class="w3-button w3-display-right" value="1">&#10095;</button>
+	</div>
+	
+	<div class="w3-row-padding w3-section">
+		<div class="my-content">
+			<ul class="logo-col">
+				<li><img class="view-partner w3-opacity w3-hover-opacity-off img-responsive"
+			   src="./img/logo/adidas.jpg" value="1" alt="1번">
+			   1번</li>
+				<li><img class="view-partner w3-opacity w3-hover-opacity-off img-responsive"
+			   src="./img/logo/google.jpg" value="2" alt="2번">
+			   2번</li>
+				<li><img class="view-partner w3-opacity w3-hover-opacity-off img-responsive"
+			   src="./img/logo/gsshop.jpg" value="3" alt="3번">
+			   3번</li>
+				<li> <img class="view-partner w3-opacity w3-hover-opacity-off img-responsive"
+			   src="./img/logo/lgcnsnew.gif" value="4" alt="4번">
+			   4번</li>
+				<li><img class="view-partner w3-opacity w3-hover-opacity-off img-responsive"
+			   src="./img/logo/marvel.jpg" value="5" alt="5번">
+			   5번</li>
+			   <li><img class="view-partner w3-opacity w3-hover-opacity-off img-responsive"
+			   src="./img/logo/nike.jpg" value="6" alt="6번">
+			   6번</li>
+				<li><img class="view-partner w3-opacity w3-hover-opacity-off img-responsive"
+			   src="./img/logo/pixar.jpg" value="7" alt="7번">
+			   7번</li>
+				<li><img class="view-partner w3-opacity w3-hover-opacity-off img-responsive"
+			   src="./img/logo/samsung.jpg" value="8" alt="8번">
+			   8번</li>
+				<li> <img class="view-partner w3-opacity w3-hover-opacity-off img-responsive"
+			   src="./img/logo/waltdisney.jpg" value="9" alt="9번">
+			   9번</li>
+			</ul>
+		</div>
+	</div>
+</div>
+	
+</main>
+<!-- bottom area -->
+<!--#includefile="common-src/_bottom.html" -->
+
+<!-- JavaScript zone -->
+<script src="js/jQuery/jquery-3.1.1.min.js"></script>
+<script src="js/jQuery/jquery-migrate-3.0.0.js"></script>
+<script type="text/javascript" src="js/top-and-bottom.js"></script>
+<script type="text/javascript">
+	/* addEventListener이 ie8 이하 부터 addEventListener는 먹히지 않는다*/
+	function addEvent(element, eventName, cb, isCapture) { 
+		if (window.addEventListener) { 
+			element.addEventListener(eventName, cb, isCapture); 
+		} else if (window.attachEvent) { 
+			element.attachEvent("on" + eventName, cb); 
+		} else { 
+			element["on" + eventName] = cb; 
+		} 
+	}
+
+	var smallSlides = document.getElementsByClassName("view-partner");
+	var pmButton = document.getElementsByClassName("w3-button");
+	var slideIndex = 1;
+	var viewSeq = [false, false];
+	var $rightButton = $(".w3-display-right");
+	
+	showDivs(slideIndex);
+	
+	var autoSlide = setInterval(function(){$rightButton.trigger("click");}, 5000);
+	
+	function stopAutoSlide(){
+		clearInterval(autoSlide);
+	}
+	
+	function startAutoSlide(){
+		autoSlide = setInterval(function(){$rightButton.trigger("click");}, 5000);
+	}
+
+	function plusDivs(event) {
+		event.preventDefault();
+		var n = parseInt(event.target.getAttribute("value"));
+		if(event.target.classList.contains("view-partner")){
+			showDivs(slideIndex = n);
+			return;
+		}
+		showDivs(slideIndex += n);
+	}
+
+	/*function currentDiv(event) {
+		event.preventDefault();
+		var n = parseInt(event.target.getAttribute("value"));
+	  	showDivs(slideIndex = n);
+	}*/
+
+	function showDivs(n) {
+		var i;
+		var viewCnt = 1;
+		var x = document.getElementsByClassName("mySlides"); //큰 그림
+		var xLength = x.length;
+		var dots = smallSlides;								//작은 그림
+		var dotsLength = dots.length;
+		var dispWithSize = 330;
+		
+		if (n > xLength) {slideIndex = 1}
+		if (n < 1) {slideIndex = xLength}
+		
+		for (i = 0; i < xLength; i++) {
+			x[i].style.display = "none"; 
+		} 
+		for (i = 0; i < dotsLength; i++) {
+			dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+		}
+		
+		var currentView = slideIndex-1;
+		
+		x[currentView].style.display = "block";
+		dots[currentView].className += " w3-opacity-off";
+		
+		var slideView = document.getElementsByClassName("logo-col")[0].style;
+		
+		if(slideIndex === 1){
+			slideView.transform = "translate3d(0px, 0px, 0px)";
+			return;
+		}
+		if(slideIndex === dotsLength){
+			return;
+		}
+		
+		//console.log("current ",slideView.transform);
+		
+		//사파리 이 샹놈은 아무것도 안된다.
+		slideView.transform = "translate3d("+((currentView-1)*-dispWithSize)+"px, 0px, 0px)";
+	}
+	
+	for(var i = 0; i<smallSlides.length; i++){
+		addEvent(smallSlides[i], "click", plusDivs, false); 
+		addEvent(smallSlides[i], "mouseover", stopAutoSlide, false); 
+		addEvent(smallSlides[i], "mouseleave", startAutoSlide, false); 
+	} 
+	
+	for(var i = 0; i<pmButton.length; i++){
+		addEvent(pmButton[i], "mouseover", stopAutoSlide, false);
+		addEvent(pmButton[i], "mouseleave", startAutoSlide, false);
+	}
+	
+	addEvent(document.getElementsByClassName("w3-display-left")[0], "click", plusDivs, false);
+	addEvent(document.getElementsByClassName("w3-display-right")[0], "click", plusDivs, false);
+	
+</script> 
+</body>
+</html>
