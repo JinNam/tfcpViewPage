@@ -5,11 +5,19 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
 <title>SJ TECH</title>
+<<<<<<< HEAD
 <!--
 <link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/3/w3.css">-->
 <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" />
 <link rel="stylesheet" type="text/css" href="./css/index-style.css" />
 <link rel="stylesheet" type="text/css" href="./css/intro-style.css" />
+=======
+
+<link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/3/w3.css">
+<link rel="stylesheet" type="text/css" href="./css/bootstrap-theme.min.css" />
+<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="./css/common-style.css" />
+>>>>>>> sub1
 <link rel="shortcut icon" href="./img/sjtechfavicon.ico">
 
 <style>
@@ -21,6 +29,7 @@
 		cursor:pointer;
 		width:100%;
 	}
+<<<<<<< HEAD
 	.my-content{
 		overflow-x: hidden;
 		position: relative;
@@ -130,11 +139,14 @@
 		color:#000!important;
 		background-color:#ccc!important
 	}
+=======
+>>>>>>> sub1
 </style>
 </head>
 <body>
 <!-- top area --> 
 <!--#includefile="common-src/_top.html"-->
+<<<<<<< HEAD
 
 <main>
 <h1 style="text-align:center;">선진과 함께하는 성공적인 파트너쉽 입니다.</h1>
@@ -187,6 +199,50 @@
 			</ul>
 		</div>
 	</div>
+=======
+<main>
+
+<div class="w3-content" style="max-width:1000px">
+	<img class="mySlides img-responsive" src="./img/choi/250B423D58CA7EF92335A6.jpg" >
+	<img class="mySlides img-responsive" src="./img/choi/257E323D58CA7EFB10790C.jpg" >
+	<img class="mySlides img-responsive" src="./img/choi/257F4E3D58CA7EF930DF06.jpg">
+	<img class="mySlides img-responsive" src="./img/choi/2630C43D58CA7EF90B25D5.jpg" >
+	<img class="mySlides img-responsive" src="./img/choi/2724B03D58CA7EFC2217E0.jpg" >
+	
+	<div class="w3-row-padding w3-section">
+	
+		<button class="w3-button w3-display-left" value="-1">&#10094;</button>
+		
+		<div class="w3-col s4">
+		  <img class="view-partner w3-opacity w3-hover-opacity-off img-responsive"
+		   src="./img/choi/250B423D58CA7EF92335A6.jpg" value="1" alt="1번">
+		   1번
+		</div>
+		<div class="w3-col s4">
+		  <img class="view-partner w3-opacity w3-hover-opacity-off img-responsive"
+		   src="./img/choi/257E323D58CA7EFB10790C.jpg" value="2" alt="2번">
+		   2번
+		</div>
+		<div class="w3-col s4">
+		  <img class="view-partner w3-opacity w3-hover-opacity-off img-responsive"
+		   src="./img/choi/257F4E3D58CA7EF930DF06.jpg" value="3" alt="3번">
+		   3번
+		</div>
+		<div class="w3-col s4" style="display:none">
+		  <img class="view-partner w3-opacity w3-hover-opacity-off img-responsive"
+		   src="./img/choi/2630C43D58CA7EF90B25D5.jpg" value="4" alt="4번">
+		   4번
+		</div>
+		<div class="w3-col s4" style="display:none">
+		  <img class="view-partner w3-opacity w3-hover-opacity-off img-responsive"
+		   src="./img/choi/2724B03D58CA7EFC2217E0.jpg" value="5" alt="5번">
+		   5번
+		</div>
+		
+		<button class="w3-button w3-display-right" value="1">&#10095;</button>
+	</div>
+	
+>>>>>>> sub1
 </div>
 	
 </main>
@@ -196,7 +252,11 @@
 <!-- JavaScript zone -->
 <script src="js/jQuery/jquery-3.1.1.min.js"></script>
 <script src="js/jQuery/jquery-migrate-3.0.0.js"></script>
+<<<<<<< HEAD
 <script type="text/javascript" src="js/top-and-bottom.js"></script>
+=======
+<script type="text/javascript" src="/js/top-and-bottom.js"></script>
+>>>>>>> sub1
 <script type="text/javascript">
 	/* addEventListener이 ie8 이하 부터 addEventListener는 먹히지 않는다*/
 	function addEvent(element, eventName, cb, isCapture) { 
@@ -209,14 +269,24 @@
 		} 
 	}
 
+<<<<<<< HEAD
 	var smallSlides = document.getElementsByClassName("view-partner");
 	var pmButton = document.getElementsByClassName("w3-button");
 	var slideIndex = 1;
 	var viewSeq = [false, false];
+=======
+	var viewPartner = document.getElementsByClassName("view-partner");
+	var pmButton = document.getElementsByClassName("w3-button");
+	var slideIndex = 1;
+>>>>>>> sub1
 	var $rightButton = $(".w3-display-right");
 	
 	showDivs(slideIndex);
 	
+<<<<<<< HEAD
+=======
+	
+>>>>>>> sub1
 	var autoSlide = setInterval(function(){$rightButton.trigger("click");}, 5000);
 	
 	function stopAutoSlide(){
@@ -228,6 +298,7 @@
 	}
 
 	function plusDivs(event) {
+<<<<<<< HEAD
 		event.preventDefault();
 		var n = parseInt(event.target.getAttribute("value"));
 		if(event.target.classList.contains("view-partner")){
@@ -242,15 +313,32 @@
 		var n = parseInt(event.target.getAttribute("value"));
 	  	showDivs(slideIndex = n);
 	}*/
+=======
+		var n = parseInt(event.target.getAttribute("value"));
+	  	showDivs(slideIndex += n);
+	}
+
+	function currentDiv(event) {
+		var n = parseInt(event.target.getAttribute("value"));
+	  	showDivs(slideIndex = n);
+	} 
+>>>>>>> sub1
 
 	function showDivs(n) {
 		var i;
 		var viewCnt = 1;
+<<<<<<< HEAD
 		var x = document.getElementsByClassName("mySlides"); //큰 그림
 		var xLength = x.length;
 		var dots = smallSlides;								//작은 그림
 		var dotsLength = dots.length;
 		var dispWithSize = 330;
+=======
+		var x = document.getElementsByClassName("mySlides");
+		var xLength = x.length;
+		var dots = viewPartner;
+		var dotsLength = dots.length;
+>>>>>>> sub1
 		
 		if (n > xLength) {slideIndex = 1}
 		if (n < 1) {slideIndex = xLength}
@@ -261,6 +349,7 @@
 		for (i = 0; i < dotsLength; i++) {
 			dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
 		}
+<<<<<<< HEAD
 		
 		var currentView = slideIndex-1;
 		
@@ -287,6 +376,33 @@
 		addEvent(smallSlides[i], "click", plusDivs, false); 
 		addEvent(smallSlides[i], "mouseover", stopAutoSlide, false); 
 		addEvent(smallSlides[i], "mouseleave", startAutoSlide, false); 
+=======
+		x[slideIndex-1].style.display = "block";
+		dots[slideIndex-1].className += " w3-opacity-off";
+		
+		for(i = slideIndex-1; i<(dotsLength+(slideIndex-1)); i++){
+			var j = i;
+			console.log("초기값",j);
+			if(j >= dotsLength){
+				console.log("빼기전",j);
+				j-=(dotsLength);
+				console.log("뺀후",j);
+			}
+			if(viewCnt < 4){
+				document.getElementsByClassName("w3-col")[j].style.display = "block";
+			}else{
+				document.getElementsByClassName("w3-col")[j].style.display = "none";
+			}
+			
+			viewCnt++;
+		}
+	} 
+	
+	for(var i = 0; i<viewPartner.length; i++){
+		addEvent(viewPartner[i], "click", currentDiv, false); 
+		addEvent(viewPartner[i], "mouseover", stopAutoSlide, false); 
+		addEvent(viewPartner[i], "mouseleave", startAutoSlide, false); 
+>>>>>>> sub1
 	} 
 	
 	for(var i = 0; i<pmButton.length; i++){

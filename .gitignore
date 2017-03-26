@@ -4,6 +4,7 @@ MyriadPro/
 node_modules/
 .sass-cache/
 bootstrap-for-sass/
+test_picture/
 
 # Windows image file caches
 Thumbs.db

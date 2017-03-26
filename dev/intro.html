@@ -1,36 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko-KR">
 <head>
-  
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=yes">
 <title>SJ TECH</title>
 
 <link rel="stylesheet" type="text/css" href="./css/bootstrap-theme.min.css" />
 <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" />
-<link rel="stylesheet" type="text/css" href="./css/index-style.css" />
+<link rel="stylesheet" type="text/css" href="./css/common-style.css" />
 <link rel="stylesheet" type="text/css" href="./css/intro-style.css" />
 <link rel="shortcut icon" href="./img/sjtechfavicon.ico">
 
 </head>
-<body>
+<body> 
 <!-- DOM의 변수명은 스네이크 케이스를 활용 -->
-<!-- top area -->
+<!-- top area --> 
 <!--#includefile="common-src/_top.html"-->
-
 <main>
 	<div class="main_contents">
 		<div class="row">
 			<div class="sub_contents col-xs-6 col-md-4">
 				<div class="owner_profile thumbnail">
-					<img src="./img/profile.JPG" alt="profile_picture" class="img-circle">
+					<img src="./img/profile.jpg" alt="profile_picture" class="img-circle">
 					<div class="caption">
 						<h3>안녕하세요.</h3>
 						<p>선진기계 주인장 김신 입니다. 
-						귀하가 원하는 모든 제품이 여기에 있습니다.<br/>
-						Hello i'am Sun-Jin tech We will make all the products you want.<br/>
-						先進機械店主です。あなたが望むすべての製品を作っています。<br/>
+						귀하가 원하는 모든 제품이 여기에 있습니다.<br/>						
 						Die erweiterte Host-Maschine. Wir produzieren alle Produkte, die Sie wollen.<br/>
 						</p>			
 					</div>
@@ -76,27 +72,23 @@
 			</div>	
 		</div>	
 	</div>	
-</main>	
-
+</main>
 <!-- bottom area -->
 <!--#includefile="common-src/_bottom.html" -->
-
 <script src="js/jQuery/jquery-3.1.1.min.js"></script>
 <script src="js/jQuery/jquery-migrate-3.0.0.js"></script>
-<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
-<!--<script src="/js/jQuery/jquery-ui.min.js"></script>-->
-<!--<script src="/js/jQuery/jquery.mobile-1.4.5.min.js"></script>-->
 <script type="text/javascript" src="/js/top-and-bottom.js"></script>
-<!--<script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=022ded60e4849b0a26c9949d7b3b58be"></script>-->
 <script type="text/javascript">		
 	function initMap() {
         var myLatLng = {lat: 37.5090882, lng: 126.8801865};
+
         // Create a map object and specify the DOM element for display.
         var map = new google.maps.Map(document.getElementById('intro_map'), {
           center: myLatLng,
           scrollwheel: true,
           zoom: 14
         });
+
         // Create a marker and set its position.
         var marker = new google.maps.Marker({
           map: map,

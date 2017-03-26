@@ -2,7 +2,8 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     connect = require('gulp-connect'),
  	ssi = require('gulp-html-ssi'),
-	uglify = require('gulp-uglify');
+	uglify = require('gulp-uglify'),
+	runSequence = require('run-sequence');
 	//out = require('gulp-out'); //파일명에 min 붙임
 
 var JS = 'js',
@@ -17,15 +18,16 @@ var path = {
 
 //자바스크립트 파일을 minify
 gulp.task('uglify', function () {
-    return gulp.src('./dev/js/*.js')
+    return gulp.src('./dev/js/**/*.js')
         .pipe(uglify()) 
         .pipe(gulp.dest(path.dist+JS))
-        .pipe(gulp.dest(path.build+JS));
+        .pipe(gulp.dest(path.build+JS))
+        .pipe(connect.reload());
 });
 
 //sass 파일 컴파일
 gulp.task('sass', function(){
-	return gulp.src('./dev/css/*.scss')
+	return gulp.src('./dev/css/**/*.scss')
 	.pipe(sass().on('error', sass.logError))
 	.pipe(gulp.dest(path.dist+CSS))
 	.pipe(gulp.dest(path.build+CSS))
@@ -40,18 +42,13 @@ gulp.task('htmlSSI', function() {
 });
 
 gulp.task('html', function(){
-	gulp.src('./dist/*.html')
+	gulp.src('./dist/**/*.html')
 	.pipe(connect.reload());
 })
 
 //빌드시 빌드 폴더로 이미지 이동 
 gulp.task('img', function(){
-	gulp.src(['./dev/img/**/*.jpg',
-				'./dev/img/**/*.png',
-				'./dev/img/**/*.ico',
-				'./dev/img/**/*.jpeg',
-				'./dev/img/**/*.gif'
-				])
+	gulp.src('./dev/img/**/*.*')
 	.pipe(gulp.dest(path.dist+IMG))
 	.pipe(gulp.dest(path.build+IMG))
 	.pipe(connect.reload());
@@ -75,16 +72,19 @@ gulp.task('connect',function(){
 
 gulp.task('watch', function(){
 	gulp.watch('./dev/css/*.scss',['sass']);
-	gulp.watch('./dev/js/*.js',['uglify']);
-	gulp.watch('./dev/*.html', ['htmlSSI','html']);	
-	gulp.watch(['./dev/img/**/*.jpg',
-				'./dev/img/**/*.png',
-				'./dev/img/**/*.ico',
-				'./dev/img/**/*.jpeg',
-				'./dev/img/**/*.gif'
-				], ['img']);
-	gulp.watch(['./dev/fonts/**/*.*'],['fonts']);	
+	gulp.watch('./dev/js/**/*.js',['uglify']);
+	gulp.watch('./dev/**/*.html', ['htmlSSI','html']);
+	gulp.watch('./dev/img/**/*.*', ['img']);
+	gulp.watch('./dev/fonts/**/*.*',['fonts']);	
 });
 
-gulp.task('default', ['sass','html','htmlSSI','connect','img','uglify','fonts','watch']);
+//빌드
+gulp.task('build', ['sass', 'htmlSSI']);
 
+//gulp를 실행하면 수행할 default 작업
+gulp.task('default', function (done) {
+	//빌드(uglify, minifycss, minifyhtml)를 병렬로 수행한 뒤, 그 다음 server 와 watch 를 병렬로 수행
+	return runSequence('build', ['html','img','fonts','connect','watch']);
+});
+
+//참고 https://github.com/eu81273/gulp-step-by-step/blob/master/step13_run_sequence/gulpfile.js
