@@ -37,12 +37,14 @@ body{
 
 /////////////////////// header navi /////////////////////
 #floating_header {	
+	height: 65px;
+	
 	@mixin header-inner{
 		width: 980px;
 		margin: 0 auto;
 		padding-left: 10px; 
 		padding-right: 10px;
-		max-width: 100%; 
+		max-width: 100%;
 	}
 	@mixin floating-header-inner-container{
 		padding-top: 0px;
@@ -110,7 +112,14 @@ body{
 		direction: ltr;
 	}
 	@mixin floating-search-big-text {
-		position:absolute; width:350px; height:70px; z-index:2; display:none; margin:0 auto; top:15px; left:565px;
+		position:absolute; 
+		width:350px; 
+		height:70px; 
+		z-index:2; 
+		display:none; 
+		margin:0 auto; 
+		top:15px; 
+		left:565px;
 	}	
 	@mixin li-nth($font-size:20px){
 		&:nth-child(n){
@@ -183,6 +192,7 @@ body{
 			@include header-inner-container-contents-left;
 			
 			.menu_left {
+				cursor: pointer;
 				@include header-menu-left;
 			}
 		}
@@ -363,8 +373,8 @@ body{
 	display: block;
 	max-height: 100%;
 	box-sizing: border-box;
-		
-	@media only screen and (max-width: 767px){		
+	
+/*	@media only screen and (max-width: 767px){		
 		margin-top:59.4px;
 	}	
 	@media only screen and (min-width: 768px) and (max-width: 991px){
@@ -372,7 +382,7 @@ body{
 	}	
 	@media only screen and (min-width: 992px){
 		margin-top:58.4px;
-	}
+	}*/
 	
 	img{
 		max-width: 100%;
